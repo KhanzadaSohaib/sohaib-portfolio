@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sohaib Ahmed — Software Engineer | Websites, Web Apps & Mobile Apps</title>
+<meta name="description" content="Sohaib Ahmed is a software engineer building fast, mobile-friendly websites, booking systems and React Native apps for businesses. See live projects and get a free demo.">
+<meta name="author" content="Sohaib Ahmed">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sohaib Ahmed — Software Engineer">
+<meta property="og:description" content="Websites, booking systems and mobile apps that bring businesses more customers. Free demo first.">
+<meta name="theme-color" content="#0a0b10">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0b10;--bg2:#0f1118;--card:#141722;--card2:#191d2b;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);--ink:#eef0f6;--mute:#9aa0b4;--a:#7c5cff;--al:#b7a6ff;--a2:#22d3a6;--wa:#25D366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit;text-decoration:none}
+img,iframe{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(10,11,16,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:17px;letter-spacing:-.3px;display:flex;align-items:center;gap:10px}
+.logo i{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--a2));display:grid;place-items:center;font-style:normal;font-size:13px;color:#fff}
+.links{display:flex;gap:26px;font-size:14px;color:var(--mute)} .links a{transition:color .15s ease} .links a:hover{color:var(--ink)}
+.navr{display:flex;gap:10px;align-items:center}
+.icon-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;color:var(--mute);transition:color .15s ease,border-color .15s ease}
+.icon-btn:hover{color:var(--ink);border-color:var(--line2)} .icon-btn svg{width:18px;height:18px;fill:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn.wa{background:var(--wa);color:#04210e} .btn.wa:hover{background:#34e27a}
+.btn.pri{background:var(--ink);color:#0a0b10} .btn.pri:hover{background:#fff}
+.btn.ghost{border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--ink)} .btn.ghost:hover{background:rgba(255,255,255,.07)}
+.btn.sm{padding:9px 14px;font-size:14px;border-radius:10px}
+.btn svg{width:18px;height:18px;fill:currentColor}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:96px 0 84px}
+.glow{position:absolute;border-radius:50%;filter:blur(20px);pointer-events:none}
+.g1{right:-160px;top:-220px;width:760px;height:760px;background:radial-gradient(circle,rgba(124,92,255,.38),transparent 62%)}
+.g2{left:-260px;bottom:-340px;width:720px;height:720px;background:radial-gradient(circle,rgba(34,211,166,.18),transparent 62%)}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%);opacity:.5}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--mute);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 13px;border-radius:999px}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--a2);box-shadow:0 0 0 4px rgba(34,211,166,.2)}
+h1{font-size:60px;line-height:1.03;letter-spacing:-2px;margin:22px 0 20px;font-weight:800;text-wrap:balance}
+.grad{background:linear-gradient(90deg,var(--al),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--mute);max-width:540px;text-wrap:pretty}
+.ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.trust{display:flex;gap:22px;margin-top:36px;color:var(--mute);font-size:14px;flex-wrap:wrap}
+.trust span:before{content:"✓ ";color:var(--a2);font-weight:700}
+/* code card */
+.code{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line2);border-radius:18px;box-shadow:0 40px 90px rgba(0,0,0,.55);overflow:hidden}
+.code .top{display:flex;gap:7px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.code .top i{width:11px;height:11px;border-radius:50%;background:#2c3145} .code .top i:nth-child(1){background:#ff5f57}.code .top i:nth-child(2){background:#febc2e}.code .top i:nth-child(3){background:#28c840}
+.code .top span{margin-left:10px;font-size:12px;color:var(--mute)}
+.code pre{padding:22px 22px 26px;font-size:14px;line-height:1.75;color:#cfd3e3;overflow:auto;font-family:"JetBrains Mono",monospace}
+.k{color:#c792ea}.s{color:#c3e88d}.p{color:#82aaff}.c{color:#5d6480}.n{color:#f78c6c}
+.badges{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.badge{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px;flex:1;min-width:150px}
+.badge b{font-size:20px}
+/* stack strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden}
+.strip .wrap{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;gap:18px;flex-wrap:wrap;color:var(--mute);font-weight:600;font-size:15px}
+.strip span{display:flex;align-items:center;gap:9px}
+.strip svg{width:20px;height:20px}
+section{padding:104px 0}
+.alt{background:var(--bg2)}
+.eyebrow{color:var(--a2);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:44px;letter-spacing:-1.4px;line-height:1.08;margin-top:10px;font-weight:800;text-wrap:balance}
+.sub{color:var(--mute);margin-top:14px;max-width:640px;font-size:17px;text-wrap:pretty}
+.head{margin-bottom:48px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.avatar{aspect-ratio:1;border-radius:24px;background:radial-gradient(circle at 30% 25%,rgba(124,92,255,.55),transparent 55%),radial-gradient(circle at 80% 85%,rgba(34,211,166,.4),transparent 55%),var(--card);border:1px solid var(--line2);display:grid;place-items:center;position:relative;overflow:hidden}
+.avatar span{font-size:120px;font-weight:800;letter-spacing:-6px;color:rgba(255,255,255,.92)}
+.avatar small{position:absolute;left:18px;bottom:16px;font-size:13px;color:var(--mute);background:rgba(10,11,16,.6);padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
+.about p{color:var(--mute);font-size:17px;margin-top:16px}
+.about p strong{color:var(--ink);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.facts .card{padding:20px} .facts b{display:block;font-size:15px;margin-bottom:4px} .facts span{color:var(--mute);font-size:14px}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.skills h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.skills h3 i{width:34px;height:34px;border-radius:10px;background:rgba(124,92,255,.15);color:var(--al);display:grid;place-items:center;font-style:normal;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;color:var(--ink);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:rgba(124,92,255,.15);color:var(--al);margin-bottom:18px}
+.svc h3{font-size:18px;margin-bottom:8px} .svc p{color:var(--mute);font-size:15px}
+.svc ul{list-style:none;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.svc li{font-size:14px;color:var(--mute);padding:4px 0} .svc li:before{content:"→ ";color:var(--a2)}
+/* work */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.filters button{font:inherit;font-size:14px;color:var(--mute);background:transparent;border:1px solid var(--line);padding:8px 15px;border-radius:999px;cursor:pointer;transition:color .15s ease,border-color .15s ease,background .15s ease}
+.filters button.on,.filters button:hover{color:var(--ink);border-color:rgba(124,92,255,.6);background:rgba(124,92,255,.12)}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .2s ease,border-color .2s ease}
+.proj:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.45)}
+.shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d0f17;border-bottom:1px solid var(--line)}
+.shot .bar{position:absolute;left:0;right:0;top:0;height:26px;background:#1a1d29;display:flex;gap:6px;align-items:center;padding:0 12px;z-index:2}
+.shot .bar i{width:8px;height:8px;border-radius:50%;background:#353a50}
+.shot .bar span{margin-left:8px;font-size:11px;color:var(--mute);font-family:"JetBrains Mono",monospace}
+.shot iframe{position:absolute;top:26px;left:0;width:1440px;height:900px;border:0;transform-origin:0 0;pointer-events:none}
+.shot .ph{position:absolute;right:16px;bottom:-30px;width:23%;aspect-ratio:390/760;border-radius:16px;border:5px solid #0d0f17;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.55);z-index:3;background:#fff}
+.shot .ph iframe{top:0;width:390px;height:760px;pointer-events:none}
+.meta{padding:20px 22px 22px}
+.meta .row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.meta h3{font-size:19px} .meta small{color:var(--mute);font-size:13px}
+.tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap} .tags i{font-style:normal;font-size:12px;color:var(--mute);background:rgba(255,255,255,.05);padding:4px 9px;border-radius:999px}
+.acts{display:flex;gap:8px;margin-top:16px}
+.note{color:var(--mute);font-size:13px;margin-top:24px}
+/* modal */
+dialog{margin:auto;border:0;padding:0;background:transparent;max-width:760px;width:calc(100% - 32px);color:var(--ink)}
+dialog::backdrop{background:rgba(5,6,10,.7);backdrop-filter:blur(6px)}
+.modal{background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:34px;position:relative}
+.modal .x{position:absolute;right:16px;top:16px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--mute);font-size:20px;cursor:pointer}
+.modal h3{font-size:28px;letter-spacing:-.6px;margin:6px 0 4px}
+.modal .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.modal h4{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--a2);margin-bottom:8px}
+.modal p,.modal li{color:var(--mute);font-size:15px}
+.modal ul{list-style:none} .modal li{padding:3px 0} .modal li:before{content:"✓ ";color:var(--a2);font-weight:700}
+/* includes */
+.inc{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checks div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:500;display:flex;gap:10px;align-items:center}
+.checks div:before{content:"✓";color:var(--a2);font-weight:800}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{padding:26px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(124,92,255,.09),transparent)}
+.step:before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:30px;color:var(--al);display:block;margin-bottom:14px;font-family:"JetBrains Mono",monospace}
+.step h3{font-size:18px;margin-bottom:6px} .step p{color:var(--mute);font-size:15px}
+/* faq */
+.faqw{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--mute);font-size:22px;line-height:1} details[open] summary:after{content:"–"}
+details p{color:var(--mute);margin-top:10px}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.cbox{border-radius:24px;padding:44px;background:radial-gradient(circle at 15% 15%,rgba(124,92,255,.42),transparent 50%),radial-gradient(circle at 90% 95%,rgba(34,211,166,.28),transparent 50%),var(--card);border:1px solid var(--line2)}
+.cbox h2{font-size:38px}
+.cways{margin-top:28px;display:grid;gap:12px}
+.cway{display:flex;gap:14px;align-items:center;background:rgba(10,11,16,.45);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:border-color .15s ease}
+.cway:hover{border-color:var(--line2)} .cway svg{width:22px;height:22px;fill:currentColor;flex-shrink:0} .cway small{display:block;color:var(--mute);font-size:12px}
+form.card{padding:32px;display:grid;gap:16px}
+label{font-size:13px;color:var(--mute);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:13px 14px;outline:none;transition:border-color .15s ease}
+input:focus,select:focus,textarea:focus{border-color:rgba(124,92,255,.7)}
+textarea{min-height:110px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+footer{padding:40px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .fl{display:flex;gap:18px} footer a:hover{color:var(--ink)}
+.float{position:fixed;right:22px;bottom:22px;z-index:30;box-shadow:0 14px 34px rgba(0,0,0,.45);border-radius:999px;padding:14px 20px}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease} .reveal.in{opacity:1;transform:none}
+@media (max-width:980px){
+ .hero .wrap,.inc,.about,.faqw,.contact{grid-template-columns:1fr} h1{font-size:44px}
+ .svc,.steps,.skills{grid-template-columns:1fr 1fr} .work{grid-template-columns:1fr} .links{display:none}
+ .avatar{max-width:320px}
+}
+@media (max-width:560px){
+ .wrap{padding:0 20px} h1{font-size:37px;letter-spacing:-1.2px} h2,.cbox h2{font-size:31px} section{padding:76px 0} .hero{padding:64px 0}
+ .svc,.steps,.checks,.skills,.facts,.two,.modal .cols{grid-template-columns:1fr} .cbox,.modal{padding:26px}
+ .float span{display:none} .float{padding:14px} .code pre{font-size:12px}
+ .navr .icon-btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <a href="#top" class="logo"><i>SA</i>Sohaib Ahmed</a>
+ <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+ <div class="navr">
+  <a class="icon-btn" href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
+  <a class="btn wa sm" data-wa="Assalam o Alaikum Sohaib, mujhe website ke bare mein baat karni hai."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Let's talk</a>
+ </div>
+</div></nav>
+
+<header class="hero" id="top">
+ <div class="grid-bg"></div><div class="glow g1"></div><div class="glow g2"></div>
+ <div class="wrap">
+  <div>
+   <span class="pill"><b></b>Available for new projects</span>
+   <h1>I build websites & apps that bring businesses <span class="grad">more customers.</span></h1>
+   <p class="lead">I'm Sohaib Ahmed, a software engineer working with React, Next.js, Node.js and React Native. I design and build fast, mobile-friendly websites, booking systems and apps — and I show you a working demo before you pay.</p>
+   <div class="ctas">
+    <a class="btn wa" data-wa="Assalam o Alaikum Sohaib, mujhe apne business ki free demo website dekhni hai."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Get a free demo</a>
+    <a class="btn ghost" href="#work">View projects →</a>
+   </div>
+   <div class="trust"><span>Demo before payment</span><span>Mobile-first</span><span>Clear pricing</span></div>
+  </div>
+  <div>
+   <div class="code">
+    <div class="top"><i></i><i></i><i></i><span class="mono">sohaib.config.js</span></div>
+<pre><span class="k">const</span> <span class="p">sohaib</span> = {
+  role: <span class="s">"Software Engineer"</span>,
+  stack: [<span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"Node.js"</span>, <span class="s">"React Native"</span>],
+  builds: [<span class="s">"Websites"</span>, <span class="s">"Booking systems"</span>, <span class="s">"Mobile apps"</span>],
+  focus: <span class="s">"More customers for your business"</span>,
+  freeDemo: <span class="n">true</span>,
+};
+<span class="c">// Your business, online — the right way.</span></pre>
+   </div>
+   <div class="badges">
+    <div class="badge"><b>⚡</b>Fast & SEO-ready</div>
+    <div class="badge"><b>📱</b>Works on every phone</div>
+    <div class="badge"><b>💬</b>WhatsApp built in</div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<div class="strip"><div class="wrap">
+ <span><svg viewBox="-11.5 -10.2 23 20.5"><circle r="2.05" fill="#61dafb"/><g fill="none" stroke="#61dafb"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>React</span>
+ <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="M9 7v10M9 7l7 10M15 7v6" stroke="#000" stroke-width="2" fill="none"/></svg>Next.js</span>
+ <span><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="3" fill="#f7df1e"/><path d="M7 18c.6 1 1.4 1.6 2.6 1.6 1.4 0 2.2-.7 2.2-2.3V10h-2v7.3c0 .6-.3.8-.7.8-.4 0-.7-.3-1-.8L7 18Zm6.6-.2c.7 1.2 1.9 1.8 3.4 1.8 1.7 0 3-.9 3-2.5 0-1.5-.9-2.1-2.4-2.8l-.5-.2c-.8-.3-1.1-.6-1.1-1.1 0-.5.4-.8.9-.8s.9.2 1.2.8l1.6-1c-.7-1.2-1.6-1.6-2.8-1.6-1.7 0-2.8 1.1-2.8 2.5 0 1.5.9 2.2 2.2 2.8l.5.2c.9.4 1.4.6 1.4 1.2 0 .5-.5.9-1.2.9-.9 0-1.4-.4-1.8-1.1l-1.6.9Z" fill="#000"/></svg>JavaScript</span>
+ <span><svg viewBox="0 0 24 24"><path d="M12 1.8 3 7v10l9 5.2 9-5.2V7l-9-5.2Z" fill="#3c873a"/><path d="M12 7.5v9M8 9.7v4.6M16 9.7v4.6" stroke="#fff" stroke-width="1.6"/></svg>Node.js</span>
+ <span><svg viewBox="-11.5 -10.2 23 20.5"><circle r="2.05" fill="#a78bfa"/><g fill="none" stroke="#a78bfa"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>React Native</span>
+ <span><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#22d3a6" stroke-width="2.4"/><path d="m15 15 6 6" stroke="#22d3a6" stroke-width="2.6" stroke-linecap="round"/></svg>SEO</span>
+</div></div>
+
+<section id="about"><div class="wrap about">
+ <div class="avatar reveal"><span>SA</span><small>Sohaib Ahmed · Software Engineer</small></div>
+ <div class="reveal">
+  <div class="eyebrow">About me</div>
+  <h2>Engineer by skill. Focused on results for your business.</h2>
+  <p>I'm <strong>Sohaib Ahmed</strong>, a software engineer who builds for the web and mobile. My main tools are <strong>React, Next.js, JavaScript, Node.js and React Native</strong>.</p>
+  <p>Most businesses don't need complicated software — they need to be <strong>easy to find, easy to trust and easy to contact</strong>. That's what I build: clean, fast websites with booking forms, WhatsApp chat and Google Maps, plus custom systems and apps when a business needs more.</p>
+  <p>I work directly with owners, keep communication simple, and always show a working demo first so you know exactly what you're getting.</p>
+  <div class="facts">
+   <div class="card"><b>Direct contact</b><span>You talk to the developer, not a middleman</span></div>
+   <div class="card"><b>Demo first</b><span>See your site before you pay</span></div>
+   <div class="card"><b>After-launch support</b><span>Changes & updates when you need them</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+ <div class="head reveal"><div class="eyebrow">Skills</div><h2>Tech I work with</h2></div>
+ <div class="skills">
+  <div class="card reveal"><h3><i>◧</i>Frontend</h3><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">JavaScript</span><span class="chip">HTML & CSS</span><span class="chip">Responsive design</span></div></div>
+  <div class="card reveal"><h3><i>⚙</i>Backend</h3><div class="chips"><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">Forms & bookings</span><span class="chip">Databases</span></div></div>
+  <div class="card reveal"><h3><i>▯</i>Mobile</h3><div class="chips"><span class="chip">React Native</span><span class="chip">Android</span><span class="chip">iOS</span></div></div>
+  <div class="card reveal"><h3><i>↗</i>Growth</h3><div class="chips"><span class="chip">SEO basics</span><span class="chip">Google Maps</span><span class="chip">WhatsApp integration</span><span class="chip">Performance</span></div></div>
+ </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+ <div class="head reveal"><div class="eyebrow">Services</div><h2>What I can build for you</h2><p class="sub">Clear scope, fair price and a working demo before you pay anything.</p></div>
+ <div class="svc">
+  <div class="card reveal"><div class="ic">◧</div><h3>Business Website</h3><p>A modern site that builds trust and turns visitors into calls and WhatsApp messages.</p><ul><li>Up to 5 pages</li><li>Gallery & contact form</li><li>Google Maps & SEO</li></ul></div>
+  <div class="card reveal"><div class="ic">◷</div><h3>Booking & Ordering</h3><p>Online bookings, appointments or direct food orders — straight to you, no app commission.</p><ul><li>Booking / order forms</li><li>WhatsApp notifications</li><li>Simple admin view</li></ul></div>
+  <div class="card reveal"><div class="ic">▯</div><h3>Mobile Apps</h3><p>Android & iOS apps built with React Native for customers, staff or deliveries.</p><ul><li>One codebase, two platforms</li><li>Clean, native-feeling UI</li><li>Store-ready builds</li></ul></div>
+  <div class="card reveal"><div class="ic">⟳</div><h3>Care & Updates</h3><p>Monthly support so your website stays fast, secure and up to date.</p><ul><li>Content & price updates</li><li>Fixes & backups</li><li>Google listing help</li></ul></div>
+ </div>
+</div></section>
+
+<section id="work" class="alt"><div class="wrap">
+ <div class="head reveal"><div class="eyebrow">Work</div><h2>Projects</h2><p class="sub">Live, working website designs for different kinds of businesses. Open any project to try it — each one works on mobile, tablet and desktop.</p></div>
+ <div class="filters" id="filters"></div>
+ <div class="work" id="grid"></div>
+ <p class="note">These are concept projects built to show what each type of business can get. Your website is designed around your own brand, photos and content.</p>
+</div></section>
+
+<section><div class="wrap inc">
+ <div class="reveal"><div class="eyebrow">Included</div><h2>Every website comes with</h2><p class="sub">Everything a business needs to get found and get contacted — without the jargon.</p></div>
+ <div class="checks reveal"><div>Mobile-friendly design</div><div>WhatsApp chat button</div><div>Contact / booking form</div><div>Google Maps location</div><div>Basic SEO setup</div><div>Fast loading</div><div>Photo gallery</div><div>Free SSL (https)</div></div>
+</div></section>
+
+<section id="process" class="alt"><div class="wrap">
+ <div class="head reveal"><div class="eyebrow">Process</div><h2>From first message to live website</h2></div>
+ <div class="steps">
+  <div class="step reveal"><h3>Free demo</h3><p>Send your business name. I'll show you a demo of your new website.</p></div>
+  <div class="step reveal"><h3>Finalise</h3><p>We agree on pages, features and price. You share photos and details.</p></div>
+  <div class="step reveal"><h3>Build</h3><p>50% advance and I start. Most websites are ready within 48 hours of receiving your content.</p></div>
+  <div class="step reveal"><h3>Launch</h3><p>Your site goes live on your domain, and I stay available for changes and support.</p></div>
+ </div>
+</div></section>
+
+<section id="faq"><div class="wrap faqw">
+ <div class="reveal"><div class="eyebrow">FAQ</div><h2>Common questions</h2><p class="sub">Something else on your mind? Message me directly.</p></div>
+ <div class="reveal">
+  <details><summary>How much does a website cost?</summary><p>It depends on the pages and features you need. Message me with your requirements and I'll send a clear quote — no hidden charges.</p></details>
+  <details><summary>How long does it take?</summary><p>A standard business website is usually ready within 48 hours after I receive your photos and content. Larger systems take longer — I'll give you a timeline upfront.</p></details>
+  <details><summary>Do I pay before seeing anything?</summary><p>No. You see a free demo first. If you like it, you pay 50% to start and the rest when the site is ready.</p></details>
+  <details><summary>Do you provide domain and hosting?</summary><p>Yes, I can set up your domain (like yourbusiness.pk or .com) and fast hosting, or use the ones you already have.</p></details>
+  <details><summary>Can I update the website later?</summary><p>Yes. I offer monthly care plans, or one-off changes whenever you need them.</p></details>
+ </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap contact">
+ <div class="cbox reveal">
+  <div class="eyebrow">Contact</div>
+  <h2>Let's get your business online.</h2>
+  <p class="sub">Tell me a little about your business and I'll get back to you with a free demo idea.</p>
+  <div class="cways">
+   <a class="cway" data-wa="Assalam o Alaikum Sohaib, mujhe website ke bare mein baat karni hai."><svg viewBox="0 0 24 24" style="color:var(--wa)"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><div><small>Fastest reply</small>WhatsApp</div></a>
+   <a class="cway" href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg><div><small>Code & projects</small>github.com/KhanzadaSohaib</div></a>
+  </div>
+ </div>
+ <form class="card reveal" id="cform">
+  <div class="two"><div><label for="n">Your name</label><input id="n" required placeholder="Ali Khan"></div><div><label for="b">Business name</label><input id="b" required placeholder="Khan Marquee"></div></div>
+  <div><label for="t">What do you need?</label><select id="t"><option>Business website</option><option>Booking / ordering system</option><option>Mobile app</option><option>Fix or redesign my website</option><option>Something else</option></select></div>
+  <div><label for="m">Tell me more (optional)</label><textarea id="m" placeholder="City, type of business, anything you want on the website…"></textarea></div>
+  <button class="btn wa" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Send on WhatsApp</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Sohaib Ahmed · Software Engineer</span><div class="fl"><a href="#work">Projects</a><a href="#contact">Contact</a><a href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener">GitHub</a></div></div></footer>
+
+<a class="btn wa float" data-wa="Assalam o Alaikum Sohaib, mujhe website ke bare mein baat karni hai." aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>Chat on WhatsApp</span></a>
+
+<dialog id="dlg"><div class="modal" id="mbody"></div></dialog>
+
+<script>
+/* ====== WhatsApp number (country code ke saath, bina + ke) ====== */
+const WHATSAPP_NUMBER = "923258986514";
+/* ================================================================ */
+const wa = t => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+document.getElementById('cform').addEventListener('submit',e=>{e.preventDefault();
+ const v=id=>document.getElementById(id).value.trim();
+ window.open(wa(`Assalam o Alaikum Sohaib!\nName: ${v('n')}\nBusiness: ${v('b')}\nNeed: ${v('t')}\n${v('m')}`),'_blank','noopener')});
+
+const P=[
+ {id:"royal-orchard",name:"Royal Orchard",cat:"Events",type:"Wedding venue · Lahore",tags:["Booking form","Gallery","WhatsApp"],
+  prob:"Wedding venues get most enquiries during shaadi season, but families can't see halls, capacity or available dates online — so they call around or pick a venue that's easier to check.",
+  sol:"A royal, photo-led website with a 'Check Your Date' form that sends date, guests and event type straight to the venue on WhatsApp.",
+  feat:["Date & guest enquiry form","Venue & services overview","Photo gallery","One-tap call & WhatsApp","Google Maps location"]},
+ {id:"grill-house",name:"Karachi Grill House",cat:"Food",type:"Restaurant · Karachi",tags:["Direct ordering","Menu","No commission"],
+  prob:"Delivery apps charge a commission on every order, and the restaurant doesn't own its customer list.",
+  sol:"A bold, appetite-first website with the full menu and a direct order form — customers order straight from the restaurant.",
+  feat:["Menu categories","Direct order form","Delivery & takeaway options","WhatsApp ordering","Party / bulk orders"]},
+ {id:"smile-dental",name:"Smile Studio",cat:"Health",type:"Dental clinic · Lahore",tags:["Online booking","Treatments"],
+  prob:"Patients want to know treatments and timings before booking, and phone lines get busy during clinic hours.",
+  sol:"A clean, calming clinic website listing treatments with a simple online appointment request.",
+  feat:["Treatment pages","Appointment request form","Clinic hours & location","WhatsApp contact","Mobile-first layout"]},
+ {id:"skyline-estate",name:"Skyline Estate",cat:"Real Estate",type:"Real estate agency · Karachi",tags:["Listings","Lead form","WhatsApp"],
+  prob:"Agencies post listings on many portals but have no home base that builds trust and captures leads for themselves.",
+  sol:"A professional agency site with services, areas covered and a free-valuation lead form that goes straight to WhatsApp.",
+  feat:["Services for buy, sell & rent","Areas covered","Valuation lead form","Property gallery","Click-to-call"]},
+ {id:"glow-salon",name:"Glow Beauty Lounge",cat:"Beauty",type:"Salon & bridal · Karachi",tags:["Bookings","Services"],
+  prob:"Bookings are scattered across Instagram DMs and calls, and bridal clients want to see work before they enquire.",
+  sol:"An elegant salon website with services, a looks gallery and an appointment form for bridal and party bookings.",
+  feat:["Service menu","Bridal & party bookings","Looks gallery","WhatsApp booking","Opening hours"]},
+ {id:"brightway-school",name:"Brightway School System",cat:"Education",type:"School · Rawalpindi",tags:["Admissions form","Programs"],
+  prob:"Parents compare schools online before visiting. Without a website, a school depends only on word of mouth and Facebook.",
+  sol:"A bright, trustworthy school site with programs, campus gallery and an online admission enquiry form.",
+  feat:["Programs by level","Admission enquiry form","Campus gallery","Notices & events","Parent contact"]},
+ {id:"citycare-hospital",name:"CityCare Hospital",cat:"Health",type:"Hospital · Faisalabad",tags:["Appointments","Departments"],
+  prob:"Patients search for departments, doctor timings and contact numbers online, and outdated pages lose their trust.",
+  sol:"A clear hospital website with departments, appointment booking and quick access to contact and location.",
+  feat:["Department pages","Appointment request","Lab reports section","24/7 contact","Directions & map"]},
+ {id:"velvet-events",name:"Velvet Hall",cat:"Events",type:"Luxury event hall · Lahore",tags:["Reservations","Premium UI"],
+  prob:"Premium venues need a website that looks as high-end as the venue itself — a basic page undersells it.",
+  sol:"A minimal, luxury-style site with a reservation form and an experience-led layout.",
+  feat:["Premium visual design","Reservation form","Experience highlights","Gallery","WhatsApp & call"]},
+];
+const grid=document.getElementById('grid'),fil=document.getElementById('filters');
+const cats=["All",...new Set(P.map(p=>p.cat))];
+function card(p,i){return `
+ <article class="proj">
+  <div class="shot"><div class="bar"><i></i><i></i><i></i><span>${p.id}.html</span></div>
+   <iframe data-src="/${p.id}.html" title="${p.name} desktop preview" loading="lazy" tabindex="-1" scrolling="no"></iframe>
+   <div class="ph"><iframe data-src="/${p.id}.html" title="${p.name} mobile preview" loading="lazy" tabindex="-1" scrolling="no"></iframe></div>
+  </div>
+  <div class="meta"><div class="row"><div><h3>${p.name}</h3><small>${p.type}</small></div></div>
+   <div class="tags">${p.tags.map(t=>`<i>${t}</i>`).join("")}</div>
+   <div class="acts"><a class="btn pri sm" href="/${p.id}.html" target="_blank" rel="noopener">Live demo ↗</a><button class="btn ghost sm" data-i="${i}">Case study</button></div>
+  </div>
+ </article>`}
+function fit(){document.querySelectorAll('.shot').forEach(s=>{const w=s.clientWidth;const f=s.querySelector(':scope>iframe');f.style.transform=`scale(${w/1440})`;
+ const ph=s.querySelector('.ph');const pf=ph.querySelector('iframe');pf.style.transform=`scale(${(ph.clientWidth)/390})`})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('iframe[data-src]').forEach(f=>{f.src=f.dataset.src;f.removeAttribute('data-src')});io.unobserve(e.target)}}),{rootMargin:"300px"});
+function render(c){grid.innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>c==="All"||p.cat===c).map(([p,i])=>card(p,i)).join("");fit();grid.querySelectorAll('.proj').forEach(el=>io.observe(el))}
+fil.innerHTML=cats.map((c,i)=>`<button class="${i?'':'on'}">${c}</button>`).join("");
+fil.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')return;fil.querySelectorAll('button').forEach(b=>b.classList.remove('on'));e.target.classList.add('on');render(e.target.textContent)});
+render("All");addEventListener('resize',fit);
+const dlg=document.getElementById('dlg'),mb=document.getElementById('mbody');
+grid.addEventListener('click',e=>{const b=e.target.closest('[data-i]');if(!b)return;const p=P[b.dataset.i];
+ mb.innerHTML=`<button class="x" aria-label="Close">×</button><div class="eyebrow">Case study · ${p.type}</div><h3>${p.name}</h3>
+ <div class="tags">${p.tags.map(t=>`<i>${t}</i>`).join("")}</div>
+ <div class="cols"><div><h4>The problem</h4><p>${p.prob}</p></div><div><h4>The solution</h4><p>${p.sol}</p></div>
+ <div><h4>Key features</h4><ul>${p.feat.map(f=>`<li>${f}</li>`).join("")}</ul></div><div><h4>Built with</h4><p>HTML, CSS & JavaScript · Mobile-first responsive layout · WhatsApp & Maps integration</p>
+ <div class="acts" style="margin-top:18px"><a class="btn pri sm" href="/${p.id}.html" target="_blank" rel="noopener">Open live demo ↗</a></div></div></div>`;
+ dlg.showModal()});
+dlg.addEventListener('click',e=>{if(e.target===dlg||e.target.classList.contains('x'))dlg.close()});
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
