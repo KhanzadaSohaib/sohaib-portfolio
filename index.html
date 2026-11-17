@@ -3,399 +3,418 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sohaib Ahmed — Software Engineer | Websites, Web Apps & Mobile Apps</title>
-<meta name="description" content="Sohaib Ahmed is a software engineer building fast, mobile-friendly websites, booking systems and React Native apps for businesses. See live projects and get a free demo.">
-<meta name="author" content="Sohaib Ahmed">
-<meta property="og:type" content="website">
+<title>Sohaib Ahmed — Software Engineer | Mobile Apps, Web Apps & Websites</title>
+<meta name="description" content="Sohaib Ahmed is a software engineer building mobile apps, web apps and business websites with React, React Native and Node.js. Builder of ClothHub, ProPOS and more.">
 <meta property="og:title" content="Sohaib Ahmed — Software Engineer">
-<meta property="og:description" content="Websites, booking systems and mobile apps that bring businesses more customers. Free demo first.">
-<meta name="theme-color" content="#0a0b10">
+<meta property="og:description" content="I build apps people actually use — mobile apps, web apps and business websites.">
+<meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0b10;--bg2:#0f1118;--card:#141722;--card2:#191d2b;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);--ink:#eef0f6;--mute:#9aa0b4;--a:#7c5cff;--al:#b7a6ff;--a2:#22d3a6;--wa:#25D366}
+:root{--bg:#0b0b0c;--bg2:#111113;--card:#161618;--card2:#1c1c1f;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.15);--ink:#f5f4f0;--mute:#9b9a97;--cream:#f3efe6;--gold:#e8c27a;--mint:#5eead4;--wa:#25D366;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.55}
-a{color:inherit;text-decoration:none}
-img,iframe{display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+body{font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
+a{color:inherit;text-decoration:none} button{font:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.mono{font-family:"JetBrains Mono",monospace}
+::selection{background:var(--cream);color:#000}
+/* grain + cursor glow */
+body:before{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#glow{position:fixed;left:0;top:0;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(232,194,122,.10),transparent 60%);transform:translate(-50%,-50%);transition:opacity .3s;opacity:0}
+#bar{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 0;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--cream));z-index:60}
 /* nav */
-nav{position:sticky;top:0;z-index:40;background:rgba(10,11,16,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-weight:800;font-size:17px;letter-spacing:-.3px;display:flex;align-items:center;gap:10px}
-.logo i{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--a2));display:grid;place-items:center;font-style:normal;font-size:13px;color:#fff}
-.links{display:flex;gap:26px;font-size:14px;color:var(--mute)} .links a{transition:color .15s ease} .links a:hover{color:var(--ink)}
-.navr{display:flex;gap:10px;align-items:center}
-.icon-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;color:var(--mute);transition:color .15s ease,border-color .15s ease}
-.icon-btn:hover{color:var(--ink);border-color:var(--line2)} .icon-btn svg{width:18px;height:18px;fill:currentColor}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s ease,background .15s ease,border-color .15s ease}
-.btn:active{transform:scale(.97)}
-.btn.wa{background:var(--wa);color:#04210e} .btn.wa:hover{background:#34e27a}
-.btn.pri{background:var(--ink);color:#0a0b10} .btn.pri:hover{background:#fff}
-.btn.ghost{border:1px solid var(--line2);background:rgba(255,255,255,.03);color:var(--ink)} .btn.ghost:hover{background:rgba(255,255,255,.07)}
-.btn.sm{padding:9px 14px;font-size:14px;border-radius:10px}
-.btn svg{width:18px;height:18px;fill:currentColor}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;width:min(1160px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 18px;border-radius:999px;background:rgba(20,20,22,.6);backdrop-filter:blur(16px) saturate(140%);border:1px solid var(--line);transition:background .3s}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:-.2px}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--cream);color:#0b0b0c;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800}
+.links{display:flex;gap:4px}
+.links a{font-size:14px;color:var(--mute);padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
+.links a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;border:0;cursor:pointer;transition:transform .25s var(--ease),background .2s,box-shadow .25s;will-change:transform}
+.btn svg{width:17px;height:17px;fill:currentColor}
+.btn.cream{background:var(--cream);color:#0b0b0c} .btn.cream:hover{box-shadow:0 10px 40px rgba(243,239,230,.18)}
+.btn.ghost{background:rgba(255,255,255,.05);border:1px solid var(--line2);color:var(--ink)} .btn.ghost:hover{background:rgba(255,255,255,.09)}
+.btn.sm{padding:9px 16px;font-size:14px}
+.btn:active{transform:scale(.96)!important}
 /* hero */
-.hero{position:relative;overflow:hidden;padding:96px 0 84px}
-.glow{position:absolute;border-radius:50%;filter:blur(20px);pointer-events:none}
-.g1{right:-160px;top:-220px;width:760px;height:760px;background:radial-gradient(circle,rgba(124,92,255,.38),transparent 62%)}
-.g2{left:-260px;bottom:-340px;width:720px;height:720px;background:radial-gradient(circle,rgba(34,211,166,.18),transparent 62%)}
-.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%);opacity:.5}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--mute);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 13px;border-radius:999px}
-.pill b{width:8px;height:8px;border-radius:50%;background:var(--a2);box-shadow:0 0 0 4px rgba(34,211,166,.2)}
-h1{font-size:60px;line-height:1.03;letter-spacing:-2px;margin:22px 0 20px;font-weight:800;text-wrap:balance}
-.grad{background:linear-gradient(90deg,var(--al),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:18px;color:var(--mute);max-width:540px;text-wrap:pretty}
-.ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
-.trust{display:flex;gap:22px;margin-top:36px;color:var(--mute);font-size:14px;flex-wrap:wrap}
-.trust span:before{content:"✓ ";color:var(--a2);font-weight:700}
-/* code card */
-.code{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line2);border-radius:18px;box-shadow:0 40px 90px rgba(0,0,0,.55);overflow:hidden}
-.code .top{display:flex;gap:7px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
-.code .top i{width:11px;height:11px;border-radius:50%;background:#2c3145} .code .top i:nth-child(1){background:#ff5f57}.code .top i:nth-child(2){background:#febc2e}.code .top i:nth-child(3){background:#28c840}
-.code .top span{margin-left:10px;font-size:12px;color:var(--mute)}
-.code pre{padding:22px 22px 26px;font-size:14px;line-height:1.75;color:#cfd3e3;overflow:auto;font-family:"JetBrains Mono",monospace}
-.k{color:#c792ea}.s{color:#c3e88d}.p{color:#82aaff}.c{color:#5d6480}.n{color:#f78c6c}
-.badges{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
-.badge{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px;flex:1;min-width:150px}
-.badge b{font-size:20px}
-/* stack strip */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden}
-.strip .wrap{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;gap:18px;flex-wrap:wrap;color:var(--mute);font-weight:600;font-size:15px}
-.strip span{display:flex;align-items:center;gap:9px}
-.strip svg{width:20px;height:20px}
-section{padding:104px 0}
-.alt{background:var(--bg2)}
-.eyebrow{color:var(--a2);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase}
-h2{font-size:44px;letter-spacing:-1.4px;line-height:1.08;margin-top:10px;font-weight:800;text-wrap:balance}
-.sub{color:var(--mute);margin-top:14px;max-width:640px;font-size:17px;text-wrap:pretty}
-.head{margin-bottom:48px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
-/* about */
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
-.avatar{aspect-ratio:1;border-radius:24px;background:radial-gradient(circle at 30% 25%,rgba(124,92,255,.55),transparent 55%),radial-gradient(circle at 80% 85%,rgba(34,211,166,.4),transparent 55%),var(--card);border:1px solid var(--line2);display:grid;place-items:center;position:relative;overflow:hidden}
-.avatar span{font-size:120px;font-weight:800;letter-spacing:-6px;color:rgba(255,255,255,.92)}
-.avatar small{position:absolute;left:18px;bottom:16px;font-size:13px;color:var(--mute);background:rgba(10,11,16,.6);padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
-.about p{color:var(--mute);font-size:17px;margin-top:16px}
-.about p strong{color:var(--ink);font-weight:600}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-.facts .card{padding:20px} .facts b{display:block;font-size:15px;margin-bottom:4px} .facts span{color:var(--mute);font-size:14px}
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.skills h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.skills h3 i{width:34px;height:34px;border-radius:10px;background:rgba(124,92,255,.15);color:var(--al);display:grid;place-items:center;font-style:normal;font-size:16px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:130px 0 70px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;width:100%}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:#cfcdc7;border:1px solid var(--line2);background:rgba(255,255,255,.04);padding:7px 14px 7px 10px;border-radius:999px}
+.pill b{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+h1{font-size:clamp(46px,7.2vw,96px);line-height:.95;letter-spacing:-.045em;font-weight:700;margin:26px 0 24px}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+h1 .w span{display:inline-block;transform:translateY(105%);animation:up 1s var(--ease) forwards}
+@keyframes up{to{transform:none}}
+.grey{background:linear-gradient(180deg,#8d8c88,#5e5d5a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--mute);max-width:540px;opacity:0;animation:fade .9s var(--ease) .9s forwards}
+.ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fade .9s var(--ease) 1.05s forwards}
+.meta{display:flex;gap:26px;margin-top:40px;color:var(--mute);font-size:14px;flex-wrap:wrap;opacity:0;animation:fade .9s var(--ease) 1.2s forwards}
+.meta b{display:block;color:var(--ink);font-size:22px;font-weight:700;letter-spacing:-.5px}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* phones */
+.stage{position:relative;height:620px;perspective:1400px;opacity:0;animation:fade 1.2s var(--ease) .5s forwards}
+.rig{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .6s var(--ease)}
+.phone{position:absolute;width:230px;aspect-ratio:9/19;border-radius:38px;background:#0d0d0f;border:1px solid #2a2a2e;padding:9px;box-shadow:0 50px 100px rgba(0,0,0,.6),inset 0 0 0 2px #1a1a1d}
+.phone:after{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:70px;height:20px;border-radius:20px;background:#000}
+.scr{width:100%;height:100%;border-radius:30px;overflow:hidden;position:relative;background:#141416}
+.p1{left:50%;top:20px;transform:translateX(-50%) translateZ(60px);z-index:3;animation:float 6s ease-in-out infinite}
+.p2{left:2%;top:90px;transform:rotate(-9deg) translateZ(0);z-index:2;animation:float2 7s ease-in-out infinite}
+.p3{right:0;top:110px;transform:rotate(9deg);z-index:1;animation:float3 7.5s ease-in-out infinite}
+@keyframes float{50%{translate:0 -14px}} @keyframes float2{50%{translate:0 12px}} @keyframes float3{50%{translate:0 -10px}}
+/* mini UI kit */
+.ui{position:absolute;inset:0;padding:38px 12px 12px;font-size:10px;color:#eee;display:flex;flex-direction:column;gap:8px}
+.ui h5{font-size:15px;font-weight:700;letter-spacing:-.3px}
+.ui small{color:#8a8a8a;font-size:9px}
+.srch{height:24px;border-radius:8px;background:#222;display:flex;align-items:center;padding:0 9px;color:#777}
+.brand{display:flex;align-items:center;gap:8px;padding:7px;border-radius:10px;background:#1d1d20}
+.brand i{width:38px;height:46px;border-radius:7px;flex-shrink:0}
+.reel{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.85)),var(--img)}
+.reel .cap{position:absolute;left:12px;right:12px;bottom:16px;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border-radius:12px;padding:9px 10px}
+.reel .cap b{display:block;font-size:12px}
+.reel .vb{margin-top:7px;background:var(--cream);color:#000;text-align:center;border-radius:8px;padding:6px;font-weight:700;font-size:10px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:7px 9px;border-radius:9px;background:#1d1d20}
+.row i{font-style:normal;color:#aaa}
+.tot{margin-top:auto;background:#1d1d20;border-radius:12px;padding:10px}
+.tot .row{background:none;padding:3px 0}
+.pay{background:var(--mint);color:#032;border-radius:10px;padding:9px;text-align:center;font-weight:800;font-size:11px;margin-top:6px}
+.bub{max-width:78%;padding:7px 10px;border-radius:12px;background:#232327;font-size:10px}
+.bub.me{align-self:flex-end;background:var(--cream);color:#111;border-bottom-right-radius:4px}
+.bub.them{border-bottom-left-radius:4px}
+.typing{display:flex;gap:3px;padding:9px 11px;background:#232327;border-radius:12px;width:max-content}
+.typing i{width:5px;height:5px;border-radius:50%;background:#999;animation:dot 1.2s infinite} .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{40%{transform:translateY(-3px);background:#fff}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.prod{border-radius:9px;background:#1d1d20;padding:5px}
+.prod i{display:block;height:58px;border-radius:6px;margin-bottom:5px}
+.bars{display:flex;align-items:flex-end;gap:5px;height:70px;padding:8px;background:#1d1d20;border-radius:10px}
+.bars i{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(180deg,var(--mint),rgba(94,234,212,.25))}
+/* marquee */
+.marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--bg2);position:relative}
+.marq:before,.marq:after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2}
+.marq:before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)} .marq:after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent)}
+.track{display:flex;gap:56px;width:max-content;animation:scroll 32s linear infinite}
+.track span{font-size:26px;font-weight:600;color:#6c6b68;letter-spacing:-.5px;display:flex;align-items:center;gap:56px;white-space:nowrap}
+.track span:after{content:"✦";font-size:14px;color:var(--gold)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:130px 0;position:relative}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.04em;font-weight:700;margin-top:14px;text-wrap:balance}
+.sub{color:var(--mute);font-size:18px;margin-top:18px;max-width:600px;text-wrap:pretty}
+.head{margin-bottom:60px}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)} .rv.in{opacity:1;transform:none}
+.split .ln{display:block;overflow:hidden} .split .ln span{display:block;transform:translateY(100%);transition:transform 1s var(--ease)} .split.in .ln span{transform:none}
+/* featured */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:32px;overflow:hidden;border:1px solid var(--line2);background:linear-gradient(135deg,#17161a,#0f0f11)}
+.feat .txt{padding:56px}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:#0b0b0c;background:var(--gold);padding:5px 11px;border-radius:999px;font-weight:700}
+.feat h3{font-size:54px;letter-spacing:-.04em;line-height:1;margin:22px 0 14px}
+.feat p{color:var(--mute);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0}
+.stats div{border:1px solid var(--line);border-radius:16px;padding:16px;background:rgba(255,255,255,.02)}
+.stats b{display:block;font-size:30px;letter-spacing:-1px;font-weight:700}
+.stats span{color:var(--mute);font-size:13px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:13px;color:var(--ink);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.chip{font-size:13px;border:1px solid var(--line2);padding:6px 12px;border-radius:999px;color:#d8d6d0;background:rgba(255,255,255,.03)}
+.feat .vis{position:relative;min-height:560px;background:radial-gradient(circle at 60% 40%,rgba(232,194,122,.18),transparent 55%);overflow:hidden}
+.feat .vis .phone{width:210px}
+.fv1{left:12%;top:70px;transform:rotate(-8deg)} .fv2{left:42%;top:30px;z-index:2} .fv3{left:68%;top:100px;transform:rotate(8deg)}
+/* stacked project cards */
+.stack{display:flex;flex-direction:column;gap:28px}
+.pcard{position:sticky;top:110px;display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding:44px;border-radius:30px;background:var(--card);border:1px solid var(--line2);box-shadow:0 -30px 60px rgba(0,0,0,.35);transform-origin:50% 0;min-height:520px}
+.pcard .n{font-family:"JetBrains Mono",monospace;color:var(--mute);font-size:13px}
+.pcard h3{font-size:40px;letter-spacing:-.035em;line-height:1.02;margin:12px 0 12px}
+.pcard p{color:var(--mute);font-size:16px}
+.pcard ul{list-style:none;margin:22px 0;display:grid;gap:9px}
+.pcard li{display:flex;gap:10px;font-size:15px;color:#d8d6d0} .pcard li:before{content:"→";color:var(--gold)}
+.pcard .acts{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.pv{position:relative;height:430px;border-radius:22px;background:radial-gradient(circle at 50% 30%,var(--tint,rgba(94,234,212,.16)),transparent 60%),#0f0f11;border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.pv .phone{position:relative;width:200px;transform:rotate(-4deg)}
+.win{width:88%;border-radius:14px;overflow:hidden;border:1px solid #2a2a2e;background:#141416;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.win .tb{height:28px;background:#1d1d20;display:flex;gap:6px;align-items:center;padding:0 12px} .win .tb i{width:8px;height:8px;border-radius:50%;background:#3a3a40}
+.win .body{padding:14px;display:grid;gap:10px;font-size:11px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpis div{background:#1d1d20;border-radius:9px;padding:9px} .kpis b{display:block;font-size:15px}
+.tbl .row{margin-bottom:5px}
+/* concept grid */
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cc{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card);transition:transform .4s var(--ease),border-color .3s}
+.cc:hover{transform:translateY(-6px);border-color:var(--line2)}
+.cc .sh{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d0d0f}
+.cc iframe{position:absolute;top:0;left:0;width:1440px;height:1080px;border:0;transform-origin:0 0;pointer-events:none}
+.cc .m{padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cc h4{font-size:15px} .cc small{color:var(--mute);font-size:12px} .cc .go{color:var(--gold);font-size:13px;font-weight:600;white-space:nowrap}
 /* services */
 .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.svc .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:rgba(124,92,255,.15);color:var(--al);margin-bottom:18px}
-.svc h3{font-size:18px;margin-bottom:8px} .svc p{color:var(--mute);font-size:15px}
-.svc ul{list-style:none;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
-.svc li{font-size:14px;color:var(--mute);padding:4px 0} .svc li:before{content:"→ ";color:var(--a2)}
-/* work */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
-.filters button{font:inherit;font-size:14px;color:var(--mute);background:transparent;border:1px solid var(--line);padding:8px 15px;border-radius:999px;cursor:pointer;transition:color .15s ease,border-color .15s ease,background .15s ease}
-.filters button.on,.filters button:hover{color:var(--ink);border-color:rgba(124,92,255,.6);background:rgba(124,92,255,.12)}
-.work{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .2s ease,border-color .2s ease}
-.proj:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.45)}
-.shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d0f17;border-bottom:1px solid var(--line)}
-.shot .bar{position:absolute;left:0;right:0;top:0;height:26px;background:#1a1d29;display:flex;gap:6px;align-items:center;padding:0 12px;z-index:2}
-.shot .bar i{width:8px;height:8px;border-radius:50%;background:#353a50}
-.shot .bar span{margin-left:8px;font-size:11px;color:var(--mute);font-family:"JetBrains Mono",monospace}
-.shot iframe{position:absolute;top:26px;left:0;width:1440px;height:900px;border:0;transform-origin:0 0;pointer-events:none}
-.shot .ph{position:absolute;right:16px;bottom:-30px;width:23%;aspect-ratio:390/760;border-radius:16px;border:5px solid #0d0f17;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.55);z-index:3;background:#fff}
-.shot .ph iframe{top:0;width:390px;height:760px;pointer-events:none}
-.meta{padding:20px 22px 22px}
-.meta .row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-.meta h3{font-size:19px} .meta small{color:var(--mute);font-size:13px}
-.tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap} .tags i{font-style:normal;font-size:12px;color:var(--mute);background:rgba(255,255,255,.05);padding:4px 9px;border-radius:999px}
-.acts{display:flex;gap:8px;margin-top:16px}
-.note{color:var(--mute);font-size:13px;margin-top:24px}
-/* modal */
-dialog{margin:auto;border:0;padding:0;background:transparent;max-width:760px;width:calc(100% - 32px);color:var(--ink)}
-dialog::backdrop{background:rgba(5,6,10,.7);backdrop-filter:blur(6px)}
-.modal{background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:34px;position:relative}
-.modal .x{position:absolute;right:16px;top:16px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--mute);font-size:20px;cursor:pointer}
-.modal h3{font-size:28px;letter-spacing:-.6px;margin:6px 0 4px}
-.modal .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
-.modal h4{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--a2);margin-bottom:8px}
-.modal p,.modal li{color:var(--mute);font-size:15px}
-.modal ul{list-style:none} .modal li{padding:3px 0} .modal li:before{content:"✓ ";color:var(--a2);font-weight:700}
-/* includes */
-.inc{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.checks div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-weight:500;display:flex;gap:10px;align-items:center}
-.checks div:before{content:"✓";color:var(--a2);font-weight:800}
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
-.step{padding:26px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(124,92,255,.09),transparent)}
-.step:before{counter-increment:s;content:"0" counter(s);font-weight:800;font-size:30px;color:var(--al);display:block;margin-bottom:14px;font-family:"JetBrains Mono",monospace}
-.step h3{font-size:18px;margin-bottom:6px} .step p{color:var(--mute);font-size:15px}
-/* faq */
-.faqw{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
-details{border-bottom:1px solid var(--line);padding:20px 0}
-summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:20px}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";color:var(--mute);font-size:22px;line-height:1} details[open] summary:after{content:"–"}
-details p{color:var(--mute);margin-top:10px}
+.sv{padding:30px;border-radius:22px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden;transition:border-color .3s}
+.sv:before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--x,50%) var(--y,0%),rgba(232,194,122,.12),transparent 40%);opacity:0;transition:opacity .3s}
+.sv:hover:before{opacity:1} .sv:hover{border-color:var(--line2)}
+.sv .num{font-family:"JetBrains Mono",monospace;color:var(--gold);font-size:13px}
+.sv h3{font-size:22px;letter-spacing:-.5px;margin:40px 0 10px} .sv p{color:var(--mute);font-size:15px}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.big{font-size:clamp(26px,3vw,38px);line-height:1.2;letter-spacing:-.025em;font-weight:500;color:#d8d6d0}
+.big em{font-style:normal;color:var(--ink);background:linear-gradient(transparent 62%,rgba(232,194,122,.35) 0)}
+.steps{display:grid;gap:12px}
+.st{display:flex;gap:18px;padding:22px;border-radius:18px;border:1px solid var(--line);background:var(--card)}
+.st b{font-family:"JetBrains Mono",monospace;color:var(--gold);font-size:14px;padding-top:3px}
+.st h4{font-size:18px} .st p{color:var(--mute);font-size:15px}
 /* contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
-.cbox{border-radius:24px;padding:44px;background:radial-gradient(circle at 15% 15%,rgba(124,92,255,.42),transparent 50%),radial-gradient(circle at 90% 95%,rgba(34,211,166,.28),transparent 50%),var(--card);border:1px solid var(--line2)}
-.cbox h2{font-size:38px}
-.cways{margin-top:28px;display:grid;gap:12px}
-.cway{display:flex;gap:14px;align-items:center;background:rgba(10,11,16,.45);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:border-color .15s ease}
-.cway:hover{border-color:var(--line2)} .cway svg{width:22px;height:22px;fill:currentColor;flex-shrink:0} .cway small{display:block;color:var(--mute);font-size:12px}
-form.card{padding:32px;display:grid;gap:16px}
+.contact{border-radius:36px;padding:70px;background:radial-gradient(circle at 10% 0%,rgba(232,194,122,.22),transparent 45%),radial-gradient(circle at 100% 100%,rgba(94,234,212,.12),transparent 45%),var(--card);border:1px solid var(--line2);display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact h2{font-size:clamp(40px,5vw,68px)}
+.cw{display:grid;gap:10px;margin-top:30px}
+.cw a{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-radius:16px;border:1px solid var(--line2);background:rgba(0,0,0,.25);transition:background .2s,transform .3s var(--ease)}
+.cw a:hover{background:rgba(255,255,255,.06);transform:translateX(6px)} .cw small{display:block;color:var(--mute);font-size:12px}
+form{display:grid;gap:14px}
 label{font-size:13px;color:var(--mute);display:block;margin-bottom:6px}
-input,select,textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:13px 14px;outline:none;transition:border-color .15s ease}
-input:focus,select:focus,textarea:focus{border-color:rgba(124,92,255,.7)}
-textarea{min-height:110px;resize:vertical}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-footer{padding:40px 0;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-footer .fl{display:flex;gap:18px} footer a:hover{color:var(--ink)}
-.float{position:fixed;right:22px;bottom:22px;z-index:30;box-shadow:0 14px 34px rgba(0,0,0,.45);border-radius:999px;padding:14px 20px}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease} .reveal.in{opacity:1;transform:none}
-@media (max-width:980px){
- .hero .wrap,.inc,.about,.faqw,.contact{grid-template-columns:1fr} h1{font-size:44px}
- .svc,.steps,.skills{grid-template-columns:1fr 1fr} .work{grid-template-columns:1fr} .links{display:none}
- .avatar{max-width:320px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:rgba(0,0,0,.35);border:1px solid var(--line2);border-radius:14px;padding:14px 16px;outline:none;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)} textarea{min-height:110px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{padding:50px 0 40px} footer .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.huge{font-size:clamp(60px,13vw,190px);font-weight:800;letter-spacing:-.06em;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);margin-top:30px;white-space:nowrap}
+.fl{display:flex;gap:20px;color:var(--mute);font-size:14px} .fl a:hover{color:var(--ink)}
+.float{position:fixed;right:22px;bottom:22px;z-index:45;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 34px rgba(0,0,0,.45);transition:transform .3s var(--ease)}
+.float:hover{transform:scale(1.08)} .float svg{width:28px;height:28px;fill:#fff}
+@media (max-width:1000px){
+ .hero .wrap,.feat,.pcard,.about,.contact{grid-template-columns:1fr} .stage{height:520px;margin-top:10px}
+ .svc,.cg{grid-template-columns:1fr 1fr} .links{display:none} .pcard{position:relative;top:0;min-height:0}
+ .feat .vis{min-height:460px} .contact{padding:40px}
 }
-@media (max-width:560px){
- .wrap{padding:0 20px} h1{font-size:37px;letter-spacing:-1.2px} h2,.cbox h2{font-size:31px} section{padding:76px 0} .hero{padding:64px 0}
- .svc,.steps,.checks,.skills,.facts,.two,.modal .cols{grid-template-columns:1fr} .cbox,.modal{padding:26px}
- .float span{display:none} .float{padding:14px} .code pre{font-size:12px}
- .navr .icon-btn{display:none}
+@media (max-width:600px){
+ .wrap{padding:0 20px} section{padding:90px 0} .feat .txt,.pcard{padding:26px} .feat h3{font-size:40px} .pcard h3{font-size:30px}
+ .svc,.cg,.two,.stats{grid-template-columns:1fr} .stats{grid-template-columns:repeat(3,1fr)} .stats b{font-size:22px}
+ .stage{height:440px} .phone{width:170px} .p2{left:-6%} .p3{right:-6%} .feat .vis .phone{width:160px} .pv{height:380px} .pv .phone{width:170px}
+ .contact{padding:26px;border-radius:26px} nav .btn span{display:none}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}h1 .w span{transform:none}.lead,.ctas,.meta,.stage{opacity:1}.rv{opacity:1;transform:none}.split .ln span{transform:none}}
 </style>
 </head>
 <body>
-<nav><div class="wrap">
+<div id="bar"></div><div id="glow"></div>
+
+<nav>
  <a href="#top" class="logo"><i>SA</i>Sohaib Ahmed</a>
- <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
- <div class="navr">
-  <a class="icon-btn" href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
-  <a class="btn wa sm" data-wa="Assalam o Alaikum Sohaib, mujhe website ke bare mein baat karni hai."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Let's talk</a>
- </div>
-</div></nav>
+ <div class="links"><a href="#work">Work</a><a href="#websites">Websites</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+ <a class="btn cream sm mag" data-wa="Assalam o Alaikum Sohaib, mujhe aap se project ke bare mein baat karni hai."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>Let's talk</span></a>
+</nav>
 
-<header class="hero" id="top">
- <div class="grid-bg"></div><div class="glow g1"></div><div class="glow g2"></div>
- <div class="wrap">
-  <div>
-   <span class="pill"><b></b>Available for new projects</span>
-   <h1>I build websites & apps that bring businesses <span class="grad">more customers.</span></h1>
-   <p class="lead">I'm Sohaib Ahmed, a software engineer working with React, Next.js, Node.js and React Native. I design and build fast, mobile-friendly websites, booking systems and apps — and I show you a working demo before you pay.</p>
-   <div class="ctas">
-    <a class="btn wa" data-wa="Assalam o Alaikum Sohaib, mujhe apne business ki free demo website dekhni hai."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Get a free demo</a>
-    <a class="btn ghost" href="#work">View projects →</a>
-   </div>
-   <div class="trust"><span>Demo before payment</span><span>Mobile-first</span><span>Clear pricing</span></div>
+<header class="hero" id="top"><div class="wrap">
+ <div>
+  <span class="pill"><b></b>Available for new projects</span>
+  <h1><span class="w"><span>I build</span></span> <span class="w"><span style="animation-delay:.08s">apps</span></span><br><span class="w"><span class="grey" style="animation-delay:.16s">people</span></span> <span class="w"><span class="grey" style="animation-delay:.24s">actually</span></span><br><span class="w"><span style="animation-delay:.32s">use.</span></span></h1>
+  <p class="lead">I'm Sohaib Ahmed — a software engineer building mobile apps, web apps and business websites with React, React Native and Node.js. From a fashion app on iPhone & Android to point-of-sale systems that run real shops.</p>
+  <div class="ctas">
+   <a class="btn cream mag" data-wa="Assalam o Alaikum Sohaib, mujhe ek project ke bare mein baat karni hai."><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Start a project</a>
+   <a class="btn ghost mag" href="#work">See my work ↓</a>
   </div>
-  <div>
-   <div class="code">
-    <div class="top"><i></i><i></i><i></i><span class="mono">sohaib.config.js</span></div>
-<pre><span class="k">const</span> <span class="p">sohaib</span> = {
-  role: <span class="s">"Software Engineer"</span>,
-  stack: [<span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"Node.js"</span>, <span class="s">"React Native"</span>],
-  builds: [<span class="s">"Websites"</span>, <span class="s">"Booking systems"</span>, <span class="s">"Mobile apps"</span>],
-  focus: <span class="s">"More customers for your business"</span>,
-  freeDemo: <span class="n">true</span>,
-};
-<span class="c">// Your business, online — the right way.</span></pre>
-   </div>
-   <div class="badges">
-    <div class="badge"><b>⚡</b>Fast & SEO-ready</div>
-    <div class="badge"><b>📱</b>Works on every phone</div>
-    <div class="badge"><b>💬</b>WhatsApp built in</div>
-   </div>
-  </div>
+  <div class="meta"><div><b>iOS + Android</b>ClothHub, live</div><div><b>Web + Mobile</b>ProPOS systems</div><div><b>Free demo</b>before you pay</div></div>
  </div>
-</header>
+ <div class="stage" id="stage"><div class="rig" id="rig">
+  <div class="phone p2"><div class="scr"><div class="ui">
+   <h5>Brands</h5><div class="srch">Search brands</div>
+   <div class="brand"><i style="background:linear-gradient(160deg,#c9b8a6,#6b5b4d)"></i><div><b>Élan</b><br><small>1,044 products</small></div></div>
+   <div class="brand"><i style="background:linear-gradient(160deg,#7aa38e,#2f4b3e)"></i><div><b>Hussain Rehar</b><br><small>1,941 products</small></div></div>
+   <div class="brand"><i style="background:linear-gradient(160deg,#d7a3b4,#7a3e55)"></i><div><b>Amna Ismail</b><br><small>219 products</small></div></div>
+  </div></div></div>
+  <div class="phone p1"><div class="scr"><div class="reel" style="--img:radial-gradient(circle at 50% 35%,#b9c6d4 0,#6f8296 35%,#2b3542 70%)"></div><div class="ui" style="justify-content:flex-end">
+   <div class="reel"><div class="cap"><small>Hussain Rehar</small><b>Rin</b><small>Rs 155,000 · Raw Silk</small><div class="vb">Visit Brand</div></div></div>
+  </div></div></div>
+  <div class="phone p3"><div class="scr"><div class="ui">
+   <h5>New Sale</h5><small>ProPOS · Counter 1</small>
+   <div class="row"><span>Lawn Suit ×2</span><i>9,800</i></div>
+   <div class="row"><span>Dupatta ×1</span><i>2,450</i></div>
+   <div class="row"><span>Kurta ×3</span><i>8,700</i></div>
+   <div class="tot"><div class="row"><small>Subtotal</small><span>20,950</span></div><div class="row"><b>Total</b><b>Rs 20,950</b></div><div class="pay">Charge & Print</div></div>
+  </div></div></div>
+ </div></div>
+</div></header>
 
-<div class="strip"><div class="wrap">
- <span><svg viewBox="-11.5 -10.2 23 20.5"><circle r="2.05" fill="#61dafb"/><g fill="none" stroke="#61dafb"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>React</span>
- <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="M9 7v10M9 7l7 10M15 7v6" stroke="#000" stroke-width="2" fill="none"/></svg>Next.js</span>
- <span><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="3" fill="#f7df1e"/><path d="M7 18c.6 1 1.4 1.6 2.6 1.6 1.4 0 2.2-.7 2.2-2.3V10h-2v7.3c0 .6-.3.8-.7.8-.4 0-.7-.3-1-.8L7 18Zm6.6-.2c.7 1.2 1.9 1.8 3.4 1.8 1.7 0 3-.9 3-2.5 0-1.5-.9-2.1-2.4-2.8l-.5-.2c-.8-.3-1.1-.6-1.1-1.1 0-.5.4-.8.9-.8s.9.2 1.2.8l1.6-1c-.7-1.2-1.6-1.6-2.8-1.6-1.7 0-2.8 1.1-2.8 2.5 0 1.5.9 2.2 2.2 2.8l.5.2c.9.4 1.4.6 1.4 1.2 0 .5-.5.9-1.2.9-.9 0-1.4-.4-1.8-1.1l-1.6.9Z" fill="#000"/></svg>JavaScript</span>
- <span><svg viewBox="0 0 24 24"><path d="M12 1.8 3 7v10l9 5.2 9-5.2V7l-9-5.2Z" fill="#3c873a"/><path d="M12 7.5v9M8 9.7v4.6M16 9.7v4.6" stroke="#fff" stroke-width="1.6"/></svg>Node.js</span>
- <span><svg viewBox="-11.5 -10.2 23 20.5"><circle r="2.05" fill="#a78bfa"/><g fill="none" stroke="#a78bfa"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>React Native</span>
- <span><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#22d3a6" stroke-width="2.4"/><path d="m15 15 6 6" stroke="#22d3a6" stroke-width="2.6" stroke-linecap="round"/></svg>SEO</span>
-</div></div>
+<div class="marq"><div class="track"><span>React</span><span>React Native</span><span>Next.js</span><span>Node.js</span><span>Expo</span><span>TypeScript</span><span>Redux Toolkit</span><span>MongoDB</span><span>Socket.io</span><span>Firebase</span><span>React</span><span>React Native</span><span>Next.js</span><span>Node.js</span><span>Expo</span><span>TypeScript</span><span>Redux Toolkit</span><span>MongoDB</span><span>Socket.io</span><span>Firebase</span></div></div>
 
-<section id="about"><div class="wrap about">
- <div class="avatar reveal"><span>SA</span><small>Sohaib Ahmed · Software Engineer</small></div>
- <div class="reveal">
-  <div class="eyebrow">About me</div>
-  <h2>Engineer by skill. Focused on results for your business.</h2>
-  <p>I'm <strong>Sohaib Ahmed</strong>, a software engineer who builds for the web and mobile. My main tools are <strong>React, Next.js, JavaScript, Node.js and React Native</strong>.</p>
-  <p>Most businesses don't need complicated software — they need to be <strong>easy to find, easy to trust and easy to contact</strong>. That's what I build: clean, fast websites with booking forms, WhatsApp chat and Google Maps, plus custom systems and apps when a business needs more.</p>
-  <p>I work directly with owners, keep communication simple, and always show a working demo first so you know exactly what you're getting.</p>
-  <div class="facts">
-   <div class="card"><b>Direct contact</b><span>You talk to the developer, not a middleman</span></div>
-   <div class="card"><b>Demo first</b><span>See your site before you pay</span></div>
-   <div class="card"><b>After-launch support</b><span>Changes & updates when you need them</span></div>
+<section id="work"><div class="wrap">
+ <div class="head"><div class="eyebrow rv">Featured project</div><h2 class="split"><span class="ln"><span>Every brand you love.</span></span><span class="ln"><span class="grey">One feed.</span></span></h2></div>
+ <div class="feat rv">
+  <div class="txt">
+   <span class="tag">● Live on App Store & Google Play</span>
+   <h3>ClothHub</h3>
+   <p>A fashion discovery app that brings Pakistan's women's fashion — lawn, pret, unstitched and couture — from dozens of brands into one beautiful, full-screen scroll. Save what you love, share it, and buy straight from the brand.</p>
+   <div class="stats"><div><b data-count="78">0</b><span>brands in one app</span></div><div><b data-count="120" data-suf="k+">0</b><span>pieces to browse</span></div><div><b data-count="41" data-suf="k+">0</b><span>in stock to order</span></div></div>
+   <div class="chips"><span class="chip">iOS & Android app</span><span class="chip">Full-screen product reel</span><span class="chip">Smart filters</span><span class="chip">Next.js website</span></div>
+   <div style="display:flex;gap:10px;margin-top:30px;flex-wrap:wrap"><a class="btn cream mag" href="https://clothhub.digital" target="_blank" rel="noopener">Visit clothhub.digital ↗</a></div>
+  </div>
+  <div class="vis">
+   <div class="phone fv1"><div class="scr"><div class="ui"><h5>Hussain Rehar</h5><div class="srch">Search · Sort · Filters</div><div class="grid2">
+    <div class="prod"><i style="background:linear-gradient(160deg,#e9d6c1,#9c7b5c)"></i><b>Sakura</b><br><small>Rs 147,900</small></div>
+    <div class="prod"><i style="background:linear-gradient(160deg,#9cc5b0,#2f5a48)"></i><b>Rin</b><br><small>Rs 155,000</small></div>
+    <div class="prod"><i style="background:linear-gradient(160deg,#c5b1d9,#5b4378)"></i><b>Yume</b><br><small>Rs 149,000</small></div>
+    <div class="prod"><i style="background:linear-gradient(160deg,#f0c1b0,#9a4f3c)"></i><b>Evora</b><br><small>Rs 20,900</small></div></div></div></div></div>
+   <div class="phone fv2"><div class="scr"><div class="reel" style="--img:radial-gradient(circle at 50% 30%,#a7d3bf 0,#3f7a62 38%,#16302a 75%)"><div class="cap"><small>Hussain Rehar</small><b>Rin · Emerald Green</b><small>XS · S · M · L</small><div class="vb">Visit Brand</div></div></div></div></div>
+   <div class="phone fv3"><div class="scr"><div class="ui"><h5>Filters</h5><small>Narrow thousands to a dozen</small>
+    <div class="row"><span>3 piece</span><i>✓</i></div><div class="row"><span>Under Rs 25,000</span><i>✓</i></div><div class="row"><span>In stock only</span><i>✓</i></div><div class="row"><span>On sale</span><i>–</i></div><div class="pay" style="background:var(--cream);color:#000;margin-top:auto">Show 24 pieces</div></div></div></div>
   </div>
  </div>
 </div></section>
 
-<section class="alt"><div class="wrap">
- <div class="head reveal"><div class="eyebrow">Skills</div><h2>Tech I work with</h2></div>
- <div class="skills">
-  <div class="card reveal"><h3><i>◧</i>Frontend</h3><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">JavaScript</span><span class="chip">HTML & CSS</span><span class="chip">Responsive design</span></div></div>
-  <div class="card reveal"><h3><i>⚙</i>Backend</h3><div class="chips"><span class="chip">Node.js</span><span class="chip">REST APIs</span><span class="chip">Forms & bookings</span><span class="chip">Databases</span></div></div>
-  <div class="card reveal"><h3><i>▯</i>Mobile</h3><div class="chips"><span class="chip">React Native</span><span class="chip">Android</span><span class="chip">iOS</span></div></div>
-  <div class="card reveal"><h3><i>↗</i>Growth</h3><div class="chips"><span class="chip">SEO basics</span><span class="chip">Google Maps</span><span class="chip">WhatsApp integration</span><span class="chip">Performance</span></div></div>
+<section style="padding-top:0"><div class="wrap">
+ <div class="head"><div class="eyebrow rv">Selected work</div><h2 class="split"><span class="ln"><span>Things I've built.</span></span></h2><p class="sub rv">Real projects from my GitHub — from offline-first mobile apps to real-time backends.</p></div>
+ <div class="stack" id="stack">
+
+  <article class="pcard">
+   <div><span class="n">01 — Mobile app</span><h3>ProPOS Mobile</h3><p>A point-of-sale app for shops, built with Expo & React Native. Works offline, scans barcodes with the camera and prints receipts.</p>
+    <ul><li>Offline-first data with SQLite on the device</li><li>Barcode scanning & product photos via camera</li><li>Thermal receipt printing, PDF & sharing</li><li>In-app subscriptions with a paywall</li></ul>
+    <div class="chips"><span class="chip">React Native</span><span class="chip">Expo Router</span><span class="chip">TypeScript</span><span class="chip">SQLite</span><span class="chip">Reanimated</span></div>
+    <div class="acts"><a class="btn ghost sm" href="https://github.com/KhanzadaSohaib/mobile_pos" target="_blank" rel="noopener">View code ↗</a></div></div>
+   <div class="pv" style="--tint:rgba(94,234,212,.18)"><div class="phone"><div class="scr"><div class="ui">
+    <h5>Products</h5><div class="srch">Scan or search barcode</div>
+    <div class="row"><span>Basmati Rice 5kg</span><i>2,150</i></div><div class="row"><span>Cooking Oil 3L</span><i>1,890</i></div><div class="row"><span>Tea 900g</span><i>1,420</i></div>
+    <div class="tot"><div class="row"><b>Total</b><b>Rs 5,460</b></div><div class="pay">Print Receipt</div></div></div></div></div></div>
+  </article>
+
+  <article class="pcard">
+   <div><span class="n">02 — Web app</span><h3>Pro POS System</h3><p>A full point-of-sale and inventory dashboard for the web — sales, stock, reports and printable invoices.</p>
+    <ul><li>Sales & inventory tables with powerful data grids</li><li>Charts and reports for daily business</li><li>Barcode scanning in the browser</li><li>PDF invoices generated on the fly</li></ul>
+    <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Material UI</span><span class="chip">Redux Toolkit</span><span class="chip">React Query</span><span class="chip">Recharts</span></div>
+    <div class="acts"><a class="btn ghost sm" href="https://github.com/KhanzadaSohaib/POS_software" target="_blank" rel="noopener">View code ↗</a></div></div>
+   <div class="pv" style="--tint:rgba(232,194,122,.16)"><div class="win"><div class="tb"><i></i><i></i><i></i></div><div class="body">
+    <div class="kpis"><div><small>Today</small><b>Rs 84,300</b></div><div><small>Orders</small><b>126</b></div><div><small>Low stock</small><b>7</b></div></div>
+    <div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:92%"></i><i style="height:74%"></i></div>
+    <div class="tbl"><div class="row"><span>#1042 · Walk-in</span><i>Rs 3,250</i></div><div class="row"><span>#1041 · Ali Traders</span><i>Rs 18,900</i></div><div class="row"><span>#1040 · Walk-in</span><i>Rs 1,120</i></div></div></div></div></div>
+  </article>
+
+  <article class="pcard">
+   <div><span class="n">03 — E-commerce</span><h3>Multi-Mart</h3><p>A modern online store with product listings, cart, secure checkout and smooth animations.</p>
+    <ul><li>Cart & app state with Redux Toolkit</li><li>Firebase for auth and data</li><li>Stripe checkout for payments</li><li>Page & product animations with Framer Motion</li></ul>
+    <div class="chips"><span class="chip">React</span><span class="chip">Redux Toolkit</span><span class="chip">Firebase</span><span class="chip">Stripe</span><span class="chip">Framer Motion</span></div>
+    <div class="acts"><a class="btn ghost sm" href="https://github.com/KhanzadaSohaib/Multi-Mart" target="_blank" rel="noopener">View code ↗</a></div></div>
+   <div class="pv" style="--tint:rgba(244,114,182,.14)"><div class="win"><div class="tb"><i></i><i></i><i></i></div><div class="body">
+    <div style="display:flex;justify-content:space-between"><b style="font-size:14px">Multimart</b><small>🛒 3</small></div>
+    <div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+     <div class="prod"><i style="background:linear-gradient(160deg,#fbcfe8,#9d174d)"></i><b>Armchair</b><br><small>$193</small></div>
+     <div class="prod"><i style="background:linear-gradient(160deg,#bae6fd,#0c4a6e)"></i><b>Headphones</b><br><small>$99</small></div>
+     <div class="prod"><i style="background:linear-gradient(160deg,#fde68a,#92400e)"></i><b>Watch</b><br><small>$149</small></div></div>
+    <div class="pay" style="background:var(--cream);color:#000">Checkout</div></div></div></div>
+  </article>
+
+  <article class="pcard">
+   <div><span class="n">04 — Real-time backend</span><h3>Realtime Chat</h3><p>A chat app with instant messaging, built to scale across servers.</p>
+    <ul><li>Live messages with Socket.io</li><li>Redis adapter to scale across instances</li><li>Rooms, usernames & timestamps</li><li>Node.js & Express server</li></ul>
+    <div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Socket.io</span><span class="chip">Redis</span></div>
+    <div class="acts"><a class="btn ghost sm" href="https://github.com/KhanzadaSohaib/realtime_chat" target="_blank" rel="noopener">View code ↗</a></div></div>
+   <div class="pv" style="--tint:rgba(129,140,248,.18)"><div class="phone"><div class="scr"><div class="ui">
+    <h5># general</h5><small>4 online</small>
+    <div class="bub them">Server deploy ho gaya? 🚀</div><div class="bub me">Haan, Redis adapter laga diya</div><div class="bub them">Messages ab instant aa rahe hain</div><div class="bub me">Perfect 👌</div><div class="typing"><i></i><i></i><i></i></div></div></div></div></div>
+  </article>
+
+  <article class="pcard">
+   <div><span class="n">05 — Full-stack</span><h3>MERN E-commerce</h3><p>A full-stack store with a React client and a Node.js API backed by MongoDB.</p>
+    <ul><li>REST API with Express</li><li>MongoDB with Mongoose models</li><li>Secure login with JWT & hashed passwords</li><li>Separate client and server apps</li></ul>
+    <div class="chips"><span class="chip">MongoDB</span><span class="chip">Express</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">JWT</span></div>
+    <div class="acts"><a class="btn ghost sm" href="https://github.com/KhanzadaSohaib/e_commerce" target="_blank" rel="noopener">View code ↗</a></div></div>
+   <div class="pv" style="--tint:rgba(74,222,128,.14)"><div class="win"><div class="tb"><i></i><i></i><i></i></div><div class="body mono" style="font-size:11px;line-height:1.7;color:#cfcdc7">
+<span style="color:#888">// server/routes/auth.js</span><br><span style="color:#c792ea">router</span>.post(<span style="color:#c3e88d">'/login'</span>, <span style="color:#c792ea">async</span> (req, res) =&gt; {<br>&nbsp;&nbsp;const user = <span style="color:#c792ea">await</span> User.findOne({ email });<br>&nbsp;&nbsp;const ok = <span style="color:#c792ea">await</span> bcrypt.compare(pw, user.hash);<br>&nbsp;&nbsp;const token = jwt.sign({ id: user._id }, SECRET);<br>&nbsp;&nbsp;res.json({ token });<br>});</div></div></div>
+  </article>
+
  </div>
+</div></section>
+
+<section id="websites" style="background:var(--bg2)"><div class="wrap">
+ <div class="head"><div class="eyebrow rv">Business websites</div><h2 class="split"><span class="ln"><span>Websites for</span></span><span class="ln"><span class="grey">local businesses.</span></span></h2><p class="sub rv">Concept designs for the kind of businesses I build for — every one is live and works on mobile. Click to open.</p></div>
+ <div class="cg" id="cg"></div>
 </div></section>
 
 <section id="services"><div class="wrap">
- <div class="head reveal"><div class="eyebrow">Services</div><h2>What I can build for you</h2><p class="sub">Clear scope, fair price and a working demo before you pay anything.</p></div>
+ <div class="head"><div class="eyebrow rv">Services</div><h2 class="split"><span class="ln"><span>How I can help.</span></span></h2></div>
  <div class="svc">
-  <div class="card reveal"><div class="ic">◧</div><h3>Business Website</h3><p>A modern site that builds trust and turns visitors into calls and WhatsApp messages.</p><ul><li>Up to 5 pages</li><li>Gallery & contact form</li><li>Google Maps & SEO</li></ul></div>
-  <div class="card reveal"><div class="ic">◷</div><h3>Booking & Ordering</h3><p>Online bookings, appointments or direct food orders — straight to you, no app commission.</p><ul><li>Booking / order forms</li><li>WhatsApp notifications</li><li>Simple admin view</li></ul></div>
-  <div class="card reveal"><div class="ic">▯</div><h3>Mobile Apps</h3><p>Android & iOS apps built with React Native for customers, staff or deliveries.</p><ul><li>One codebase, two platforms</li><li>Clean, native-feeling UI</li><li>Store-ready builds</li></ul></div>
-  <div class="card reveal"><div class="ic">⟳</div><h3>Care & Updates</h3><p>Monthly support so your website stays fast, secure and up to date.</p><ul><li>Content & price updates</li><li>Fixes & backups</li><li>Google listing help</li></ul></div>
+  <div class="sv rv"><span class="num">01</span><h3>Mobile Apps</h3><p>iOS & Android apps with React Native and Expo — from idea to store.</p></div>
+  <div class="sv rv"><span class="num">02</span><h3>Web Apps</h3><p>Dashboards, POS, booking and ordering systems with React and Node.js.</p></div>
+  <div class="sv rv"><span class="num">03</span><h3>Business Websites</h3><p>Fast, mobile-friendly sites with WhatsApp, forms, Maps and basic SEO.</p></div>
+  <div class="sv rv"><span class="num">04</span><h3>Care & Updates</h3><p>Ongoing fixes, updates and improvements after launch.</p></div>
  </div>
 </div></section>
 
-<section id="work" class="alt"><div class="wrap">
- <div class="head reveal"><div class="eyebrow">Work</div><h2>Projects</h2><p class="sub">Live, working website designs for different kinds of businesses. Open any project to try it — each one works on mobile, tablet and desktop.</p></div>
- <div class="filters" id="filters"></div>
- <div class="work" id="grid"></div>
- <p class="note">These are concept projects built to show what each type of business can get. Your website is designed around your own brand, photos and content.</p>
-</div></section>
-
-<section><div class="wrap inc">
- <div class="reveal"><div class="eyebrow">Included</div><h2>Every website comes with</h2><p class="sub">Everything a business needs to get found and get contacted — without the jargon.</p></div>
- <div class="checks reveal"><div>Mobile-friendly design</div><div>WhatsApp chat button</div><div>Contact / booking form</div><div>Google Maps location</div><div>Basic SEO setup</div><div>Fast loading</div><div>Photo gallery</div><div>Free SSL (https)</div></div>
-</div></section>
-
-<section id="process" class="alt"><div class="wrap">
- <div class="head reveal"><div class="eyebrow">Process</div><h2>From first message to live website</h2></div>
+<section id="about" style="padding-top:0"><div class="wrap about">
+ <div class="rv"><div class="eyebrow">About</div>
+  <p class="big" style="margin-top:22px">I'm a software engineer who likes shipping things <em>real people use</em> — a fashion app on two app stores, POS systems for shops, and websites that bring businesses <em>more customers</em>.</p>
+  <div style="display:flex;gap:10px;margin-top:34px;flex-wrap:wrap"><a class="btn ghost mag" href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener">GitHub ↗</a><a class="btn cream mag" href="#contact">Work with me</a></div>
+ </div>
  <div class="steps">
-  <div class="step reveal"><h3>Free demo</h3><p>Send your business name. I'll show you a demo of your new website.</p></div>
-  <div class="step reveal"><h3>Finalise</h3><p>We agree on pages, features and price. You share photos and details.</p></div>
-  <div class="step reveal"><h3>Build</h3><p>50% advance and I start. Most websites are ready within 48 hours of receiving your content.</p></div>
-  <div class="step reveal"><h3>Launch</h3><p>Your site goes live on your domain, and I stay available for changes and support.</p></div>
+  <div class="st rv"><b>01</b><div><h4>Free demo first</h4><p>Tell me about your business — I'll show you a working demo before you pay anything.</p></div></div>
+  <div class="st rv"><b>02</b><div><h4>Clear scope & price</h4><p>We agree on features and price. 50% to start, the rest on delivery.</p></div></div>
+  <div class="st rv"><b>03</b><div><h4>Build & launch</h4><p>Most websites go live within 48 hours of getting your content. Apps on a clear timeline.</p></div></div>
+  <div class="st rv"><b>04</b><div><h4>Support after launch</h4><p>Changes, fixes and updates whenever you need them.</p></div></div>
  </div>
 </div></section>
 
-<section id="faq"><div class="wrap faqw">
- <div class="reveal"><div class="eyebrow">FAQ</div><h2>Common questions</h2><p class="sub">Something else on your mind? Message me directly.</p></div>
- <div class="reveal">
-  <details><summary>How much does a website cost?</summary><p>It depends on the pages and features you need. Message me with your requirements and I'll send a clear quote — no hidden charges.</p></details>
-  <details><summary>How long does it take?</summary><p>A standard business website is usually ready within 48 hours after I receive your photos and content. Larger systems take longer — I'll give you a timeline upfront.</p></details>
-  <details><summary>Do I pay before seeing anything?</summary><p>No. You see a free demo first. If you like it, you pay 50% to start and the rest when the site is ready.</p></details>
-  <details><summary>Do you provide domain and hosting?</summary><p>Yes, I can set up your domain (like yourbusiness.pk or .com) and fast hosting, or use the ones you already have.</p></details>
-  <details><summary>Can I update the website later?</summary><p>Yes. I offer monthly care plans, or one-off changes whenever you need them.</p></details>
- </div>
-</div></section>
-
-<section id="contact" style="padding-top:0"><div class="wrap contact">
- <div class="cbox reveal">
-  <div class="eyebrow">Contact</div>
-  <h2>Let's get your business online.</h2>
-  <p class="sub">Tell me a little about your business and I'll get back to you with a free demo idea.</p>
-  <div class="cways">
-   <a class="cway" data-wa="Assalam o Alaikum Sohaib, mujhe website ke bare mein baat karni hai."><svg viewBox="0 0 24 24" style="color:var(--wa)"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><div><small>Fastest reply</small>WhatsApp</div></a>
-   <a class="cway" href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg><div><small>Code & projects</small>github.com/KhanzadaSohaib</div></a>
-  </div>
- </div>
- <form class="card reveal" id="cform">
-  <div class="two"><div><label for="n">Your name</label><input id="n" required placeholder="Ali Khan"></div><div><label for="b">Business name</label><input id="b" required placeholder="Khan Marquee"></div></div>
-  <div><label for="t">What do you need?</label><select id="t"><option>Business website</option><option>Booking / ordering system</option><option>Mobile app</option><option>Fix or redesign my website</option><option>Something else</option></select></div>
-  <div><label for="m">Tell me more (optional)</label><textarea id="m" placeholder="City, type of business, anything you want on the website…"></textarea></div>
-  <button class="btn wa" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Send on WhatsApp</button>
+<section id="contact" style="padding-top:0"><div class="wrap"><div class="contact rv">
+ <div><div class="eyebrow">Contact</div><h2 style="margin-top:14px">Let's build<br><span class="grey">something.</span></h2>
+  <div class="cw">
+   <a data-wa="Assalam o Alaikum Sohaib, mujhe aap se baat karni hai."><div><small>Fastest reply</small>WhatsApp · 0325 8986514</div><span>↗</span></a>
+   <a href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener"><div><small>Code & projects</small>github.com/KhanzadaSohaib</div><span>↗</span></a>
+  </div></div>
+ <form id="cform">
+  <div class="two"><div><label for="n">Your name</label><input id="n" required placeholder="Ali Khan"></div><div><label for="b">Business</label><input id="b" placeholder="Khan Traders"></div></div>
+  <div><label for="t">What do you need?</label><select id="t"><option>Mobile app</option><option>Web app / dashboard</option><option>Business website</option><option>POS system</option><option>Fix or redesign</option><option>Something else</option></select></div>
+  <div><label for="m">Tell me more</label><textarea id="m" placeholder="A few lines about your idea…"></textarea></div>
+  <button class="btn cream" type="submit"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Send on WhatsApp</button>
  </form>
-</div></section>
+</div></div></section>
 
-<footer><div class="wrap"><span>© 2026 Sohaib Ahmed · Software Engineer</span><div class="fl"><a href="#work">Projects</a><a href="#contact">Contact</a><a href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener">GitHub</a></div></div></footer>
+<footer><div class="wrap"><div><div class="fl"><a href="#work">Work</a><a href="#websites">Websites</a><a href="https://github.com/KhanzadaSohaib" target="_blank" rel="noopener">GitHub</a></div><p style="color:var(--mute);font-size:14px;margin-top:12px">© 2026 Sohaib Ahmed · Software Engineer</p></div></div>
+ <div class="wrap"><div class="huge">Sohaib Ahmed</div></div></footer>
 
-<a class="btn wa float" data-wa="Assalam o Alaikum Sohaib, mujhe website ke bare mein baat karni hai." aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>Chat on WhatsApp</span></a>
-
-<dialog id="dlg"><div class="modal" id="mbody"></div></dialog>
+<a class="float" data-wa="Assalam o Alaikum Sohaib, mujhe aap se baat karni hai." aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg></a>
 
 <script>
-/* ====== WhatsApp number (country code ke saath, bina + ke) ====== */
-const WHATSAPP_NUMBER = "923258986514";
-/* ================================================================ */
-const wa = t => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t)}`;
+const WHATSAPP_NUMBER="923258986514";
+const wa=t=>`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t)}`;
 document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
-document.getElementById('cform').addEventListener('submit',e=>{e.preventDefault();
- const v=id=>document.getElementById(id).value.trim();
+document.getElementById('cform').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();
  window.open(wa(`Assalam o Alaikum Sohaib!\nName: ${v('n')}\nBusiness: ${v('b')}\nNeed: ${v('t')}\n${v('m')}`),'_blank','noopener')});
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(pointer:fine)').matches;
 
-const P=[
- {id:"royal-orchard",name:"Royal Orchard",cat:"Events",type:"Wedding venue · Lahore",tags:["Booking form","Gallery","WhatsApp"],
-  prob:"Wedding venues get most enquiries during shaadi season, but families can't see halls, capacity or available dates online — so they call around or pick a venue that's easier to check.",
-  sol:"A royal, photo-led website with a 'Check Your Date' form that sends date, guests and event type straight to the venue on WhatsApp.",
-  feat:["Date & guest enquiry form","Venue & services overview","Photo gallery","One-tap call & WhatsApp","Google Maps location"]},
- {id:"grill-house",name:"Karachi Grill House",cat:"Food",type:"Restaurant · Karachi",tags:["Direct ordering","Menu","No commission"],
-  prob:"Delivery apps charge a commission on every order, and the restaurant doesn't own its customer list.",
-  sol:"A bold, appetite-first website with the full menu and a direct order form — customers order straight from the restaurant.",
-  feat:["Menu categories","Direct order form","Delivery & takeaway options","WhatsApp ordering","Party / bulk orders"]},
- {id:"smile-dental",name:"Smile Studio",cat:"Health",type:"Dental clinic · Lahore",tags:["Online booking","Treatments"],
-  prob:"Patients want to know treatments and timings before booking, and phone lines get busy during clinic hours.",
-  sol:"A clean, calming clinic website listing treatments with a simple online appointment request.",
-  feat:["Treatment pages","Appointment request form","Clinic hours & location","WhatsApp contact","Mobile-first layout"]},
- {id:"skyline-estate",name:"Skyline Estate",cat:"Real Estate",type:"Real estate agency · Karachi",tags:["Listings","Lead form","WhatsApp"],
-  prob:"Agencies post listings on many portals but have no home base that builds trust and captures leads for themselves.",
-  sol:"A professional agency site with services, areas covered and a free-valuation lead form that goes straight to WhatsApp.",
-  feat:["Services for buy, sell & rent","Areas covered","Valuation lead form","Property gallery","Click-to-call"]},
- {id:"glow-salon",name:"Glow Beauty Lounge",cat:"Beauty",type:"Salon & bridal · Karachi",tags:["Bookings","Services"],
-  prob:"Bookings are scattered across Instagram DMs and calls, and bridal clients want to see work before they enquire.",
-  sol:"An elegant salon website with services, a looks gallery and an appointment form for bridal and party bookings.",
-  feat:["Service menu","Bridal & party bookings","Looks gallery","WhatsApp booking","Opening hours"]},
- {id:"brightway-school",name:"Brightway School System",cat:"Education",type:"School · Rawalpindi",tags:["Admissions form","Programs"],
-  prob:"Parents compare schools online before visiting. Without a website, a school depends only on word of mouth and Facebook.",
-  sol:"A bright, trustworthy school site with programs, campus gallery and an online admission enquiry form.",
-  feat:["Programs by level","Admission enquiry form","Campus gallery","Notices & events","Parent contact"]},
- {id:"citycare-hospital",name:"CityCare Hospital",cat:"Health",type:"Hospital · Faisalabad",tags:["Appointments","Departments"],
-  prob:"Patients search for departments, doctor timings and contact numbers online, and outdated pages lose their trust.",
-  sol:"A clear hospital website with departments, appointment booking and quick access to contact and location.",
-  feat:["Department pages","Appointment request","Lab reports section","24/7 contact","Directions & map"]},
- {id:"velvet-events",name:"Velvet Hall",cat:"Events",type:"Luxury event hall · Lahore",tags:["Reservations","Premium UI"],
-  prob:"Premium venues need a website that looks as high-end as the venue itself — a basic page undersells it.",
-  sol:"A minimal, luxury-style site with a reservation form and an experience-led layout.",
-  feat:["Premium visual design","Reservation form","Experience highlights","Gallery","WhatsApp & call"]},
-];
-const grid=document.getElementById('grid'),fil=document.getElementById('filters');
-const cats=["All",...new Set(P.map(p=>p.cat))];
-function card(p,i){return `
- <article class="proj">
-  <div class="shot"><div class="bar"><i></i><i></i><i></i><span>${p.id}.html</span></div>
-   <iframe data-src="/${p.id}.html" title="${p.name} desktop preview" loading="lazy" tabindex="-1" scrolling="no"></iframe>
-   <div class="ph"><iframe data-src="/${p.id}.html" title="${p.name} mobile preview" loading="lazy" tabindex="-1" scrolling="no"></iframe></div>
-  </div>
-  <div class="meta"><div class="row"><div><h3>${p.name}</h3><small>${p.type}</small></div></div>
-   <div class="tags">${p.tags.map(t=>`<i>${t}</i>`).join("")}</div>
-   <div class="acts"><a class="btn pri sm" href="/${p.id}.html" target="_blank" rel="noopener">Live demo ↗</a><button class="btn ghost sm" data-i="${i}">Case study</button></div>
-  </div>
- </article>`}
-function fit(){document.querySelectorAll('.shot').forEach(s=>{const w=s.clientWidth;const f=s.querySelector(':scope>iframe');f.style.transform=`scale(${w/1440})`;
- const ph=s.querySelector('.ph');const pf=ph.querySelector('iframe');pf.style.transform=`scale(${(ph.clientWidth)/390})`})}
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('iframe[data-src]').forEach(f=>{f.src=f.dataset.src;f.removeAttribute('data-src')});io.unobserve(e.target)}}),{rootMargin:"300px"});
-function render(c){grid.innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>c==="All"||p.cat===c).map(([p,i])=>card(p,i)).join("");fit();grid.querySelectorAll('.proj').forEach(el=>io.observe(el))}
-fil.innerHTML=cats.map((c,i)=>`<button class="${i?'':'on'}">${c}</button>`).join("");
-fil.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')return;fil.querySelectorAll('button').forEach(b=>b.classList.remove('on'));e.target.classList.add('on');render(e.target.textContent)});
-render("All");addEventListener('resize',fit);
-const dlg=document.getElementById('dlg'),mb=document.getElementById('mbody');
-grid.addEventListener('click',e=>{const b=e.target.closest('[data-i]');if(!b)return;const p=P[b.dataset.i];
- mb.innerHTML=`<button class="x" aria-label="Close">×</button><div class="eyebrow">Case study · ${p.type}</div><h3>${p.name}</h3>
- <div class="tags">${p.tags.map(t=>`<i>${t}</i>`).join("")}</div>
- <div class="cols"><div><h4>The problem</h4><p>${p.prob}</p></div><div><h4>The solution</h4><p>${p.sol}</p></div>
- <div><h4>Key features</h4><ul>${p.feat.map(f=>`<li>${f}</li>`).join("")}</ul></div><div><h4>Built with</h4><p>HTML, CSS & JavaScript · Mobile-first responsive layout · WhatsApp & Maps integration</p>
- <div class="acts" style="margin-top:18px"><a class="btn pri sm" href="/${p.id}.html" target="_blank" rel="noopener">Open live demo ↗</a></div></div></div>`;
- dlg.showModal()});
-dlg.addEventListener('click',e=>{if(e.target===dlg||e.target.classList.contains('x'))dlg.close()});
-const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+/* concept websites */
+const C=[["royal-orchard","Royal Orchard","Wedding venue"],["grill-house","Karachi Grill House","Restaurant"],["smile-dental","Smile Studio","Dental clinic"],["skyline-estate","Skyline Estate","Real estate"],["glow-salon","Glow Beauty Lounge","Salon"],["brightway-school","Brightway School","School"],["citycare-hospital","CityCare Hospital","Hospital"],["velvet-events","Velvet Hall","Event hall"]];
+const cg=document.getElementById('cg');
+cg.innerHTML=C.map(([id,n,t])=>`<a class="cc rv" href="/${id}.html" target="_blank" rel="noopener"><div class="sh"><iframe data-src="/${id}.html" title="${n} preview" tabindex="-1" scrolling="no" loading="lazy"></iframe></div><div class="m"><div><h4>${n}</h4><small>${t}</small></div><span class="go">Open ↗</span></div></a>`).join("");
+function fit(){document.querySelectorAll('.cc .sh').forEach(s=>{s.querySelector('iframe').style.transform=`scale(${s.clientWidth/1440})`})}
+fit();addEventListener('resize',fit);
+const lazy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const f=e.target.querySelector('iframe[data-src]');if(f){f.src=f.dataset.src;f.removeAttribute('data-src')}lazy.unobserve(e.target)}}),{rootMargin:"400px"});
+document.querySelectorAll('.cc').forEach(c=>lazy.observe(c));
+
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv,.split').forEach((el,i)=>{if(el.parentElement.classList.contains('svc')||el.parentElement.classList.contains('steps')||el.parentElement.id==='cg')el.style.transitionDelay=(([...el.parentElement.children].indexOf(el))%4*.08)+'s';io.observe(el)});
+document.querySelectorAll('.split .ln:nth-child(2) span').forEach(s=>s.style.transitionDelay='.1s');
+
+/* counters */
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.count,suf=el.dataset.suf||"";let t0;
+ const step=t=>{t0??=t;const p=Math.min((t-t0)/1400,1),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=v+suf;if(p<1)requestAnimationFrame(step)};
+ reduce?el.textContent=to+suf:requestAnimationFrame(step);co.unobserve(el)}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+/* scroll progress + stacked cards scale */
+const bar=document.getElementById('bar'),cards=[...document.querySelectorAll('.pcard')];
+function onScroll(){const h=document.documentElement;bar.style.transform=`scaleX(${h.scrollTop/(h.scrollHeight-h.clientHeight)})`;
+ if(reduce||innerWidth<1000)return;
+ cards.forEach((c,i)=>{const next=cards[i+1];if(!next){c.style.transform='';return}
+  const r=next.getBoundingClientRect(),top=c.getBoundingClientRect().top;const p=Math.min(Math.max((innerHeight-r.top)/(innerHeight-top),0),1);
+  c.style.transform=`scale(${1-p*.06})`;c.style.filter=`brightness(${1-p*.45})`})}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+if(fine&&!reduce){
+ /* cursor glow */
+ const g=document.getElementById('glow');addEventListener('pointermove',e=>{g.style.opacity=1;g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'},{passive:true});
+ /* hero 3D tilt */
+ const stage=document.getElementById('stage'),rig=document.getElementById('rig');
+ document.querySelector('.hero').addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;rig.style.transform=`rotateY(${x*14}deg) rotateX(${-y*10}deg)`});
+ document.querySelector('.hero').addEventListener('pointerleave',()=>rig.style.transform='');
+ /* magnetic buttons */
+ document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')});
+ /* spotlight on service cards */
+ document.querySelectorAll('.sv').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}));
+}
 </script>
 </body>
 </html>
