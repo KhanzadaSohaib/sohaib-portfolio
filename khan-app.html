@@ -5,7 +5,7 @@
 <style>
 :root{--bg:#140d0a;--card:#22170f;--ink:#fff4e3;--mute:#b9a690;--fire:#ff5a1f;--gold:#ffc23d;--ok:#3ddc84;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
+html,body{height:100%;overflow:hidden;width:100%}body{position:fixed;inset:0;height:100dvh}
 body{font-family:"Inter Display",Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow:hidden;-webkit-font-smoothing:antialiased;font-size:14px}
 .scr{position:absolute;inset:0;padding:54px 18px 110px;overflow:auto;scrollbar-width:none;transition:transform .55s var(--ease),opacity .4s}
 .scr::-webkit-scrollbar{display:none}
@@ -30,8 +30,8 @@ h1 span{color:var(--fire)}
 .p .tx{flex:1} .p b{font-size:15px;display:block} .p small{color:var(--mute);font-size:12px} .p .pr{color:var(--gold);font-weight:800;margin-top:4px;display:block}
 .add{width:38px;height:38px;border-radius:12px;background:var(--fire);color:#fff;font-size:22px;font-weight:800;display:grid;place-items:center;border:0;transition:transform .2s}
 .add.pop{animation:pp .4s var(--ease)} @keyframes pp{50%{transform:scale(1.35) rotate(90deg)}}
-.cartbar{position:absolute;left:14px;right:14px;bottom:22px;height:62px;border-radius:20px;background:var(--fire);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font-weight:800;color:#fff;transform:translateY(120px);transition:transform .5s var(--ease);box-shadow:0 14px 34px rgba(255,90,31,.45)}
-.cartbar.show{transform:none}
+.cartbar{position:absolute;left:14px;right:14px;bottom:calc(22px + env(safe-area-inset-bottom));height:62px;border-radius:20px;background:var(--fire);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font-weight:800;color:#fff;transform:translateY(160%);visibility:hidden;transition:transform .5s var(--ease),visibility .5s var(--ease);box-shadow:0 14px 34px rgba(255,90,31,.45)}
+.cartbar.show{transform:none;visibility:visible}
 .cartbar .n{background:#fff;color:var(--fire);width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;margin-right:8px;font-size:13px}
 .fly{position:absolute;font-size:34px;z-index:20;pointer-events:none;transition:all .7s cubic-bezier(.5,-0.3,.6,1)}
 .hd{display:flex;align-items:center;gap:12px;margin-bottom:18px} .hd i{font-style:normal;width:38px;height:38px;border-radius:12px;background:var(--card);display:grid;place-items:center} .hd b{font-size:20px;font-weight:900}
