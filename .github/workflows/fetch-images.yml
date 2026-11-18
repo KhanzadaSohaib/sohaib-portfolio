@@ -1,0 +1,29 @@
+name: fetch-images
+on:
+  push:
+    paths: ['.github/workflows/fetch-images.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p img
+          dl(){ curl -sSL "https://images.unsplash.com/photo-$2?w=1400&q=72&fm=jpg" -o "img/$1.jpg"; }
+          dl kb-hero 1426869981800-95ebf51ce900
+          dl kb-broast 1562967914-608f82629710
+          dl kb-broast2 1585703900468-13c7a978ad86
+          dl kb-beef 1568901346375-23c9450c58cd
+          dl kb-zinger 1761515397046-44035db91504
+          dl kb-burger2 1606755962773-d324e0a13086
+          dl kb-fries 1630384060421-cb20d0e0649d
+          dl kb-fries2 1518013431117-eb1465fa5752
+          dl kb-combo 1763689389824-dd2cea2e5772
+          dl kb-counter 1759696302352-f20e19869be2
+          ls -la img
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add img && git commit -m "Add Unsplash food photos (Unsplash License)" && git push
