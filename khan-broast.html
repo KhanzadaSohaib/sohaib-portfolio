@@ -10,7 +10,7 @@
 <style>
 :root{--bg:#120c09;--bg2:#1b120d;--card:#21160f;--ink:#fff4e3;--mute:#c9b8a3;--fire:#ff5a1f;--gold:#ffc23d;--cream:#fff4e0;--line:rgba(255,220,180,.12);--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}body,section,.hero,.gal,footer{max-width:100vw}
+html{scroll-behavior:smooth;overflow-x:hidden}body{overflow-x:clip}body,section,.hero,.gal,footer{max-width:100vw}
 body{font-family:"Inter Display",Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
@@ -104,7 +104,7 @@ h2 .hot{color:var(--fire)}
 /* app */
 .app{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .phone{width:290px;margin:0 auto;aspect-ratio:9/19.3;border-radius:46px;background:#0a0706;border:1px solid #3a2a20;padding:10px;box-shadow:0 60px 120px rgba(0,0,0,.6),0 0 80px rgba(255,90,31,.25);position:relative;animation:bob 6s ease-in-out infinite}
-.phone iframe{width:390px;height:829px;border:0;border-radius:36px;transform:scale(.6923);transform-origin:0 0}
+.phone{overflow:hidden}.phone iframe{position:absolute;top:10px;left:10px;width:390px;height:870px;border:0;border-radius:52px;transform:scale(.6923);transform-origin:0 0}
 .feat{display:grid;gap:14px;margin-top:30px}
 .feat>div{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:18px;border:1px solid var(--line);background:var(--card)}
 .feat i{font-style:normal;font-size:26px}
@@ -135,7 +135,7 @@ h1 .ln{white-space:nowrap}h1 .out{-webkit-text-stroke:1.5px var(--cream)}
 .f2{width:96px;height:96px}.f3{width:104px;height:104px}.f4{width:80px;height:80px}
 .badge{width:92px;height:92px;font-size:11px;right:2%;top:2%}.badge b{font-size:22px}
 .marq{margin:-20px -10px 0;padding:12px 0}.marq .t{font-size:22px;gap:24px}.marq .t span{gap:24px}
-section{padding:80px 0}
+section{padding:60px 0}
 h2{font-size:38px}
 .gt i{width:230px;height:160px;border-radius:18px}
 .stats{gap:10px;margin-top:36px}.st{padding:18px;border-radius:18px}.st b{font-size:34px;letter-spacing:-1px}.st span{font-size:13px}
@@ -145,7 +145,8 @@ h2{font-size:38px}
 .visit{padding:24px;border-radius:26px}.info p{font-size:16px}
 .wa{right:14px;bottom:14px;padding:12px 16px;font-size:14px}
 .demo{display:none}
-footer{padding:30px 0 90px}
+footer{padding:24px 0 84px}
+section:last-of-type{padding-bottom:40px}
 .badge{animation:none;transform:rotate(-12deg)}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .ch,.lead,.ctas,.plate{opacity:1;transform:none}#loader{display:none}.rv{opacity:1;transform:none}}
