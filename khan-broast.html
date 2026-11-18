@@ -33,7 +33,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .btn.ghost{border:1.5px solid var(--line);color:var(--ink)}
 /* hero */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:110px 0 60px}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 45%,rgba(255,90,31,.35),transparent 45%),radial-gradient(circle at 20% 90%,rgba(255,194,61,.15),transparent 40%)}
+.hero .bgimg{position:absolute;inset:-4%;background:url(img/kb-hero.jpg) center/cover;animation:kb 18s ease-in-out infinite alternate;filter:saturate(1.1)}@keyframes kb{to{transform:scale(1.12) translate(-2%,-2%)}}.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(18,12,9,.97) 0%,rgba(18,12,9,.88) 42%,rgba(18,12,9,.45) 75%,rgba(18,12,9,.7)),radial-gradient(circle at 72% 45%,rgba(255,90,31,.3),transparent 45%)}.hero .wrap{z-index:2}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:20px;width:100%}
 .since{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
 .since:before{content:"";width:34px;height:2px;background:var(--gold)}
@@ -51,11 +51,11 @@ h1 .out{color:transparent;-webkit-text-stroke:2px var(--cream)}
 .disc{position:absolute;inset:40px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#3a2418,#1a100b 70%);box-shadow:0 0 0 14px rgba(255,194,61,.06),0 0 0 28px rgba(255,90,31,.05),0 60px 120px rgba(0,0,0,.6);animation:spin 40s linear infinite}
 .disc:before{content:"";position:absolute;inset:-28px;border-radius:50%;border:2px dashed rgba(255,194,61,.25)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.food{position:absolute;font-size:150px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));transition:transform .4s var(--ease);will-change:transform}
-.f1{left:50%;top:50%;font-size:230px;margin:-130px 0 0 -120px;animation:bob 4s ease-in-out infinite}
-.f2{left:2%;top:8%;animation:bob 5s ease-in-out .5s infinite}
-.f3{right:0;bottom:6%;animation:bob 4.6s ease-in-out 1s infinite}
-.f4{left:8%;bottom:4%;font-size:110px;animation:bob 5.4s ease-in-out .2s infinite}
+.food{position:absolute;border-radius:50%;background-size:cover;background-position:center;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 6px rgba(255,244,224,.08);transition:transform .4s var(--ease);will-change:transform}
+.f1{left:50%;top:50%;width:360px;height:360px;margin:-180px 0 0 -180px;animation:bob 4s ease-in-out infinite;box-shadow:0 40px 80px rgba(0,0,0,.7),0 0 0 10px rgba(255,90,31,.35),0 0 80px rgba(255,90,31,.35)}
+.f2{left:0;top:4%;width:150px;height:150px;animation:bob 5s ease-in-out .5s infinite}
+.f3{right:2%;bottom:4%;width:170px;height:170px;animation:bob 4.6s ease-in-out 1s infinite}
+.f4{left:6%;bottom:2%;width:120px;height:120px;animation:bob 5.4s ease-in-out .2s infinite}
 @keyframes bob{50%{translate:0 -18px;rotate:6deg}}
 .badge{position:absolute;right:6%;top:6%;width:130px;height:130px;border-radius:50%;background:var(--gold);color:#120c09;display:grid;place-items:center;text-align:center;font-weight:900;font-size:15px;line-height:1.1;animation:spin 14s linear infinite reverse;box-shadow:0 20px 40px rgba(0,0,0,.4)}
 .badge b{font-size:30px;display:block}
@@ -74,6 +74,7 @@ h2{font-size:clamp(40px,5.5vw,76px);line-height:.95;letter-spacing:-.045em;font-
 h2 .hot{color:var(--fire)}
 .rv{opacity:0;transform:translateY(50px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .rv.in{opacity:1;transform:none}
+.gal{overflow:hidden;padding:10px 0 40px}.gt{display:flex;gap:18px;width:max-content;animation:mq 40s linear infinite}.gt i{width:340px;height:240px;border-radius:24px;background-size:cover;background-position:center;flex-shrink:0;transform:rotate(-2deg);box-shadow:0 20px 40px rgba(0,0,0,.4)}.gt i:nth-child(even){transform:rotate(2deg) translateY(16px)}
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:60px}
 .st{border:1px solid var(--line);border-radius:24px;padding:30px;background:linear-gradient(180deg,rgba(255,90,31,.08),transparent)}
@@ -85,8 +86,8 @@ h2 .hot{color:var(--fire)}
 .item:hover{border-color:rgba(255,90,31,.5)}
 .item:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.35),transparent 65%);top:-60px;right:-60px;transition:transform .5s var(--ease)}
 .item:hover:before{transform:scale(1.4)}
-.item .em{font-size:96px;display:block;position:relative;transition:transform .5s var(--ease);filter:drop-shadow(0 18px 20px rgba(0,0,0,.5))}
-.item:hover .em{transform:scale(1.12) rotate(-8deg)}
+.item{padding:0 0 24px!important}.item .em{display:block;position:relative;height:210px;background-size:cover;background-position:center;transition:transform .7s var(--ease)}.item .em:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,var(--card))}.item h3,.item p{padding:0 22px}
+.item:hover .em{transform:scale(1.1)}.item .tag{z-index:2}
 .item h3{font-size:24px;font-weight:900;letter-spacing:-.5px;margin:18px 0 6px;position:relative}
 .item p{color:var(--mute);font-size:14px;position:relative}
 .item .tag{position:absolute;top:18px;left:18px;font-size:11px;font-weight:800;letter-spacing:1px;background:var(--gold);color:#120c09;padding:5px 10px;border-radius:999px;text-transform:uppercase}
@@ -123,7 +124,7 @@ footer{padding:40px 0;color:var(--mute);font-size:13px;text-align:center}
 <div id="loader"><div class="stamp">KHAN BROAST<small>SINCE 1980s</small></div></div>
 <nav id="nav"><div class="wrap"><a class="logo" href="#"><i>🍗</i>Khan Broast</a><div class="links"><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#app">Order Online</a><a href="#visit">Visit</a></div><a class="btn fire" href="#app">Order Now</a></div></nav>
 
-<header class="hero"><div class="wrap">
+<header class="hero"><div class="bgimg"></div><div class="wrap">
  <div>
   <span class="since">Karachi · Since the 1980s</span>
   <h1 id="h1"><span class="ln" data-t="Karachi's"></span><span class="ln hot" data-t="Original"></span><span class="ln out" data-t="Broast."></span></h1>
@@ -131,7 +132,7 @@ footer{padding:40px 0;color:var(--mute);font-size:13px;text-align:center}
   <div class="ctas"><a class="btn fire" href="#app">Order Online →</a><a class="btn ghost" href="#menu">See Menu</a></div>
  </div>
  <div class="plate" id="plate"><div class="disc"></div>
-  <span class="food f1" data-d="30">🍗</span><span class="food f2" data-d="-20">🍔</span><span class="food f3" data-d="25">🍟</span><span class="food f4" data-d="-15">🥤</span>
+  <span class="food f1" data-d="30" style="background-image:url(img/kb-broast2.jpg)"></span><span class="food f2" data-d="-20" style="background-image:url(img/kb-beef.jpg)"></span><span class="food f3" data-d="25" style="background-image:url(img/kb-fries.jpg)"></span><span class="food f4" data-d="-15" style="background-image:url(img/kb-zinger.jpg)"></span>
   <div class="badge"><div><b>40+</b>YEARS OF<br>TASTE</div></div>
  </div>
 </div></header>
@@ -149,14 +150,15 @@ footer{padding:40px 0;color:var(--mute);font-size:13px;text-align:center}
  </div>
 </div></section>
 
+<div class="gal"><div class="gt"><i style="background-image:url(img/kb-broast2.jpg)"></i><i style="background-image:url(img/kb-beef.jpg)"></i><i style="background-image:url(img/kb-fries.jpg)"></i><i style="background-image:url(img/kb-broast.jpg)"></i><i style="background-image:url(img/kb-zinger.jpg)"></i><i style="background-image:url(img/kb-hero.jpg)"></i><i style="background-image:url(img/kb-burger2.jpg)"></i><i style="background-image:url(img/kb-fries2.jpg)"></i><i style="background-image:url(img/kb-broast2.jpg)"></i><i style="background-image:url(img/kb-beef.jpg)"></i><i style="background-image:url(img/kb-fries.jpg)"></i><i style="background-image:url(img/kb-broast.jpg)"></i><i style="background-image:url(img/kb-zinger.jpg)"></i><i style="background-image:url(img/kb-hero.jpg)"></i><i style="background-image:url(img/kb-burger2.jpg)"></i><i style="background-image:url(img/kb-fries2.jpg)"></i></div></div>
 <section id="menu" style="background:var(--bg2)"><div class="wrap">
  <div class="eyebrow rv">The Menu</div>
  <h2 class="rv">Crispy. Juicy. <span class="hot">Legendary.</span></h2>
  <div class="menu">
-  <div class="item rv"><span class="tag">Signature</span><span class="em">🍗</span><h3>Chicken Broast</h3><p>Quarter, half or full — with fries, bun, raita & coleslaw.</p></div>
-  <div class="item rv"><span class="tag">Fan favourite</span><span class="em">🍔</span><h3>Beef Burger</h3><p>The juicy patty Karachi keeps coming back for.</p></div>
-  <div class="item rv"><span class="em">🌶️</span><h3>Zinger Burger</h3><p>Crunchy, spicy fillet in a soft fresh bun.</p></div>
-  <div class="item rv"><span class="em">🍟</span><h3>Fries & Sides</h3><p>Golden fries, raita, ketchup & coleslaw.</p></div>
+  <div class="item rv"><span class="tag">Signature</span><span class="em" style="background-image:url(img/kb-broast2.jpg)"></span><h3>Chicken Broast</h3><p>Quarter, half or full — with fries, bun, raita & coleslaw.</p></div>
+  <div class="item rv"><span class="tag">Fan favourite</span><span class="em" style="background-image:url(img/kb-beef.jpg)"></span><h3>Beef Burger</h3><p>The juicy patty Karachi keeps coming back for.</p></div>
+  <div class="item rv"><span class="em" style="background-image:url(img/kb-burger2.jpg)"></span><h3>Zinger Burger</h3><p>Crunchy, spicy fillet in a soft fresh bun.</p></div>
+  <div class="item rv"><span class="em" style="background-image:url(img/kb-fries2.jpg)"></span><h3>Fries & Sides</h3><p>Golden fries, raita, ketchup & coleslaw.</p></div>
  </div>
 </div></section>
 
@@ -187,7 +189,7 @@ footer{padding:40px 0;color:var(--mute);font-size:13px;text-align:center}
  <div class="info"><div><small>Address</small><p>Shahrah-e-Pakistan, Federal B Area Block 13, Gulberg Town, Karachi</p></div><div><small>Hours</small><p>Daily · 12:00 PM – 1:00 AM</p></div><div><small>Phone</small><p>0308 2385802</p></div></div>
 </div></div></section>
 
-<footer>© Khan Broast · Demo website concept by Sohaib Ahmed, Software Engineer — not an official site</footer>
+<footer>© Khan Broast · Demo website concept by Sohaib Ahmed, Software Engineer — not an official site · Food photos: Unsplash</footer>
 <a class="wa" href="#">💬 Order on WhatsApp</a>
 
 <script>
