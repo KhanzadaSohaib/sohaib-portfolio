@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Khan Broast — Karachi's Original Broast Since the 1980s | Demo</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120c09;--bg2:#1b120d;--card:#21160f;--ink:#fff4e3;--mute:#c9b8a3;--fire:#ff5a1f;--gold:#ffc23d;--cream:#fff4e0;--line:rgba(255,220,180,.12);--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter Display",Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+/* loader */
+#loader{position:fixed;inset:0;z-index:200;background:var(--fire);display:grid;place-items:center;animation:lout .8s var(--ease) 1.5s forwards}
+#loader .stamp{font-weight:900;font-size:64px;letter-spacing:-2px;color:#120c09;transform:scale(.6) rotate(-8deg);opacity:0;animation:stamp .6s var(--ease) .15s forwards}
+#loader .stamp small{display:block;text-align:center;font-size:14px;letter-spacing:6px;font-weight:700;margin-top:4px}
+@keyframes stamp{to{transform:scale(1) rotate(-4deg);opacity:1}}
+@keyframes lout{to{transform:translateY(-100%)}}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s}
+nav.s{background:rgba(18,12,9,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;letter-spacing:-.5px}
+.logo i{width:38px;height:38px;border-radius:50%;background:var(--fire);display:grid;place-items:center;font-style:normal;font-size:20px;box-shadow:0 0 0 4px rgba(255,90,31,.25)}
+.links{display:flex;gap:26px;font-size:15px;color:var(--mute);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:800;font-size:15px;transition:transform .25s var(--ease),box-shadow .25s}
+.btn.fire{background:var(--fire);color:#fff;box-shadow:0 10px 30px rgba(255,90,31,.35)}
+.btn.fire:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(255,90,31,.5)}
+.btn.ghost{border:1.5px solid var(--line);color:var(--ink)}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:110px 0 60px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 45%,rgba(255,90,31,.35),transparent 45%),radial-gradient(circle at 20% 90%,rgba(255,194,61,.15),transparent 40%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:20px;width:100%}
+.since{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
+.since:before{content:"";width:34px;height:2px;background:var(--gold)}
+h1{font-size:clamp(56px,8.5vw,124px);line-height:.88;letter-spacing:-.05em;font-weight:900;margin:22px 0 26px;text-transform:uppercase}
+h1 .ch{display:inline-block;transform:translateY(110%) rotate(8deg);opacity:0;animation:chin .9s var(--ease) forwards}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+h1 .hot{color:var(--fire);-webkit-text-stroke:0}
+h1 .out{color:transparent;-webkit-text-stroke:2px var(--cream)}
+@keyframes chin{to{transform:none;opacity:1}}
+.lead{font-size:19px;color:var(--mute);max-width:520px;line-height:1.6;opacity:0;animation:fadeup 1s var(--ease) 2.6s forwards}
+.ctas{display:flex;gap:12px;margin-top:32px;opacity:0;animation:fadeup 1s var(--ease) 2.75s forwards}
+@keyframes fadeup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.plate{position:relative;height:560px;opacity:0;animation:pop 1.2s var(--ease) 2.2s forwards}
+@keyframes pop{from{opacity:0;transform:scale(.7) rotate(-10deg)}to{opacity:1;transform:none}}
+.disc{position:absolute;inset:40px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#3a2418,#1a100b 70%);box-shadow:0 0 0 14px rgba(255,194,61,.06),0 0 0 28px rgba(255,90,31,.05),0 60px 120px rgba(0,0,0,.6);animation:spin 40s linear infinite}
+.disc:before{content:"";position:absolute;inset:-28px;border-radius:50%;border:2px dashed rgba(255,194,61,.25)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.food{position:absolute;font-size:150px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));transition:transform .4s var(--ease);will-change:transform}
+.f1{left:50%;top:50%;font-size:230px;margin:-130px 0 0 -120px;animation:bob 4s ease-in-out infinite}
+.f2{left:2%;top:8%;animation:bob 5s ease-in-out .5s infinite}
+.f3{right:0;bottom:6%;animation:bob 4.6s ease-in-out 1s infinite}
+.f4{left:8%;bottom:4%;font-size:110px;animation:bob 5.4s ease-in-out .2s infinite}
+@keyframes bob{50%{translate:0 -18px;rotate:6deg}}
+.badge{position:absolute;right:6%;top:6%;width:130px;height:130px;border-radius:50%;background:var(--gold);color:#120c09;display:grid;place-items:center;text-align:center;font-weight:900;font-size:15px;line-height:1.1;animation:spin 14s linear infinite reverse;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.badge b{font-size:30px;display:block}
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--fire);opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{opacity:0;transform:translateY(0) scale(1)}15%{opacity:1}100%{opacity:0;transform:translateY(-420px) scale(.2)}}
+/* marquee */
+.marq{background:var(--fire);transform:rotate(-2deg);margin:-30px -20px 0;padding:18px 0;overflow:hidden;position:relative;z-index:3;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.marq .t{display:flex;gap:40px;width:max-content;animation:mq 22s linear infinite;font-weight:900;font-size:34px;text-transform:uppercase;letter-spacing:-.5px;color:#120c09}
+.marq .t span{display:flex;align-items:center;gap:40px;white-space:nowrap}
+.marq .t span:after{content:"✦";color:var(--cream)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:130px 0;position:relative}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
+h2{font-size:clamp(40px,5.5vw,76px);line-height:.95;letter-spacing:-.045em;font-weight:900;margin-top:14px;text-transform:uppercase}
+h2 .hot{color:var(--fire)}
+.rv{opacity:0;transform:translateY(50px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:60px}
+.st{border:1px solid var(--line);border-radius:24px;padding:30px;background:linear-gradient(180deg,rgba(255,90,31,.08),transparent)}
+.st b{display:block;font-size:56px;font-weight:900;letter-spacing:-2px;color:var(--cream)}
+.st span{color:var(--mute);font-size:15px}
+/* menu */
+.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+.item{position:relative;border-radius:28px;padding:30px 24px 26px;background:var(--card);border:1px solid var(--line);overflow:hidden;transform-style:preserve-3d;transition:transform .2s ease,border-color .3s}
+.item:hover{border-color:rgba(255,90,31,.5)}
+.item:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.35),transparent 65%);top:-60px;right:-60px;transition:transform .5s var(--ease)}
+.item:hover:before{transform:scale(1.4)}
+.item .em{font-size:96px;display:block;position:relative;transition:transform .5s var(--ease);filter:drop-shadow(0 18px 20px rgba(0,0,0,.5))}
+.item:hover .em{transform:scale(1.12) rotate(-8deg)}
+.item h3{font-size:24px;font-weight:900;letter-spacing:-.5px;margin:18px 0 6px;position:relative}
+.item p{color:var(--mute);font-size:14px;position:relative}
+.item .tag{position:absolute;top:18px;left:18px;font-size:11px;font-weight:800;letter-spacing:1px;background:var(--gold);color:#120c09;padding:5px 10px;border-radius:999px;text-transform:uppercase}
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.big{font-size:clamp(26px,3vw,38px);line-height:1.25;font-weight:600;letter-spacing:-.02em;color:var(--mute)}
+.big b{color:var(--cream)}
+.tl{position:relative;padding-left:34px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--fire),var(--gold))}
+.tl div{position:relative;margin-bottom:30px}
+.tl div:before{content:"";position:absolute;left:-32px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--fire);box-shadow:0 0 0 5px rgba(255,90,31,.2)}
+.tl b{font-size:22px;font-weight:900;color:var(--gold)}
+.tl p{color:var(--mute);margin-top:4px}
+/* app */
+.app{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.phone{width:290px;margin:0 auto;aspect-ratio:9/19.3;border-radius:46px;background:#0a0706;border:1px solid #3a2a20;padding:10px;box-shadow:0 60px 120px rgba(0,0,0,.6),0 0 80px rgba(255,90,31,.25);position:relative;animation:bob 6s ease-in-out infinite}
+.phone iframe{width:390px;height:829px;border:0;border-radius:36px;transform:scale(.6923);transform-origin:0 0}
+.feat{display:grid;gap:14px;margin-top:30px}
+.feat div{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:18px;border:1px solid var(--line);background:var(--card)}
+.feat i{font-style:normal;font-size:26px}
+.feat b{display:block;font-size:17px} .feat span{color:var(--mute);font-size:14px}
+/* visit */
+.visit{border-radius:36px;padding:60px;background:radial-gradient(circle at 0 0,rgba(255,90,31,.35),transparent 50%),var(--card);border:1px solid var(--line);display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.info div{padding:18px 0;border-bottom:1px solid var(--line)} .info small{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:12px;text-transform:uppercase} .info p{font-size:19px;margin-top:4px}
+footer{padding:40px 0;color:var(--mute);font-size:13px;text-align:center}
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;background:#25D366;color:#fff;font-weight:800;padding:15px 20px;border-radius:999px;box-shadow:0 14px 34px rgba(0,0,0,.45);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.demo{position:fixed;left:16px;bottom:16px;z-index:60;background:rgba(0,0,0,.7);color:#fff;font-size:12px;font-weight:600;padding:9px 13px;border-radius:999px}
+@media(max-width:900px){.hero .wrap,.story,.app,.visit{grid-template-columns:1fr}.menu,.stats{grid-template-columns:1fr 1fr}.links{display:none}.plate{height:420px}.f1{font-size:170px;margin:-95px 0 0 -90px}.food{font-size:100px}.visit{padding:30px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .ch,.lead,.ctas,.plate{opacity:1;transform:none}#loader{display:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="loader"><div class="stamp">KHAN BROAST<small>SINCE 1980s</small></div></div>
+<nav id="nav"><div class="wrap"><a class="logo" href="#"><i>🍗</i>Khan Broast</a><div class="links"><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#app">Order Online</a><a href="#visit">Visit</a></div><a class="btn fire" href="#app">Order Now</a></div></nav>
+
+<header class="hero"><div class="wrap">
+ <div>
+  <span class="since">Karachi · Since the 1980s</span>
+  <h1 id="h1"><span class="ln" data-t="Karachi's"></span><span class="ln hot" data-t="Original"></span><span class="ln out" data-t="Broast."></span></h1>
+  <p class="lead">Crispy broast, juicy zinger and the famous beef burger — the same taste Karachi has queued up for at Water Pump for over four decades.</p>
+  <div class="ctas"><a class="btn fire" href="#app">Order Online →</a><a class="btn ghost" href="#menu">See Menu</a></div>
+ </div>
+ <div class="plate" id="plate"><div class="disc"></div>
+  <span class="food f1" data-d="30">🍗</span><span class="food f2" data-d="-20">🍔</span><span class="food f3" data-d="25">🍟</span><span class="food f4" data-d="-15">🥤</span>
+  <div class="badge"><div><b>40+</b>YEARS OF<br>TASTE</div></div>
+ </div>
+</div></header>
+
+<div class="marq"><div class="t"><span>Broast</span><span>Zinger</span><span>Beef Burger</span><span>Chicken Burger</span><span>Fries</span><span>Since 1980s</span><span>Broast</span><span>Zinger</span><span>Beef Burger</span><span>Chicken Burger</span><span>Fries</span><span>Since 1980s</span></div></div>
+
+<section><div class="wrap">
+ <div class="eyebrow rv">Karachi loves it</div>
+ <h2 class="rv">A legend on <span class="hot">Shahrah-e-Pakistan.</span></h2>
+ <div class="stats">
+  <div class="st rv"><b data-c="6101">0</b><span>Google reviews</span></div>
+  <div class="st rv"><b data-c="44" data-s="K+">0</b><span>Facebook fans</span></div>
+  <div class="st rv"><b data-c="40" data-s="+">0</b><span>Years serving Karachi</span></div>
+  <div class="st rv"><b>1</b><span>Original branch — no other</span></div>
+ </div>
+</div></section>
+
+<section id="menu" style="background:var(--bg2)"><div class="wrap">
+ <div class="eyebrow rv">The Menu</div>
+ <h2 class="rv">Crispy. Juicy. <span class="hot">Legendary.</span></h2>
+ <div class="menu">
+  <div class="item rv"><span class="tag">Signature</span><span class="em">🍗</span><h3>Chicken Broast</h3><p>Quarter, half or full — with fries, bun, raita & coleslaw.</p></div>
+  <div class="item rv"><span class="tag">Fan favourite</span><span class="em">🍔</span><h3>Beef Burger</h3><p>The juicy patty Karachi keeps coming back for.</p></div>
+  <div class="item rv"><span class="em">🌶️</span><h3>Zinger Burger</h3><p>Crunchy, spicy fillet in a soft fresh bun.</p></div>
+  <div class="item rv"><span class="em">🍟</span><h3>Fries & Sides</h3><p>Golden fries, raita, ketchup & coleslaw.</p></div>
+ </div>
+</div></section>
+
+<section id="story"><div class="wrap story">
+ <div class="rv"><div class="eyebrow">Our Story</div><h2 style="margin-bottom:26px">Four decades. <span class="hot">One taste.</span></h2>
+  <p class="big">Started by <b>Ahmed Saeed Khan</b> on a simple belief — <b>best quality at a reasonable price.</b> Over the years the queues grew, the city changed, but the taste stayed the same.</p></div>
+ <div class="tl rv">
+  <div><b>1980s</b><p>Khan Broast opens at Water Pump, Federal B Area.</p></div>
+  <div><b>1990s – 2010s</b><p>Becomes one of Karachi's most famous broast & burger spots.</p></div>
+  <div><b>Today</b><p>Takeaway & delivery for thousands of loyal fans.</p></div>
+  <div><b>Next</b><p>Order online & skip the queue — on web and app.</p></div>
+ </div>
+</div></section>
+
+<section id="app" style="background:var(--bg2)"><div class="wrap app">
+ <div class="rv"><div class="eyebrow">Order Online</div><h2>Skip the <span class="hot">queue.</span></h2>
+  <div class="feat">
+   <div><i>📱</i><div><b>Your own ordering app</b><span>Customers order directly — no delivery app commission.</span></div></div>
+   <div><i>⏱️</i><div><b>Order ahead, pick up hot</b><span>No more long waits at the counter.</span></div></div>
+   <div><i>📍</i><div><b>Live order tracking</b><span>From kitchen to doorstep, step by step.</span></div></div>
+   <div><i>💬</i><div><b>WhatsApp & deals</b><span>Send offers straight to loyal customers.</span></div></div>
+  </div></div>
+ <div class="rv"><div class="phone"><iframe src="khan-app.html" title="Khan Broast app demo" scrolling="no"></iframe></div></div>
+</div></section>
+
+<section id="visit"><div class="wrap"><div class="visit rv">
+ <div><div class="eyebrow">Visit us</div><h2>Hot & fresh, <span class="hot">every day.</span></h2></div>
+ <div class="info"><div><small>Address</small><p>Shahrah-e-Pakistan, Federal B Area Block 13, Gulberg Town, Karachi</p></div><div><small>Hours</small><p>Daily · 12:00 PM – 1:00 AM</p></div><div><small>Phone</small><p>0308 2385802</p></div></div>
+</div></div></section>
+
+<footer>© Khan Broast · Demo website concept by Sohaib Ahmed, Software Engineer — not an official site</footer>
+<a class="wa" href="#">💬 Order on WhatsApp</a>
+
+<script>
+// split headline into animated chars
+let d=.3;document.querySelectorAll('#h1 .ln').forEach(l=>{l.innerHTML=[...l.dataset.t].map(c=>`<span class="ch" style="animation-delay:${(d+=.045)+1.4}s">${c===' '?'&nbsp;':c}</span>`).join('')});
+// sparks
+const plate=document.getElementById('plate');for(let i=0;i<22;i++){const s=document.createElement('i');s.className='spark';s.style.left=(15+Math.random()*70)+'%';s.style.top=(55+Math.random()*40)+'%';s.style.animationDuration=(2.5+Math.random()*3)+'s';s.style.animationDelay=(Math.random()*4)+'s';plate.appendChild(s)}
+// nav
+addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>40),{passive:true});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);const c=e.target.querySelector('[data-c]');if(c)count(c)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{const sib=[...el.parentElement.children].filter(x=>x.classList.contains('rv'));el.style.transitionDelay=(sib.indexOf(el)%4)*.1+'s';io.observe(el)});
+function count(el){const to=+el.dataset.c,s=el.dataset.s||'';let t0;const f=t=>{t0??=t;const p=Math.min((t-t0)/1600,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString()+s;if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+// mouse parallax on food + tilt on menu cards
+addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;document.querySelectorAll('.food').forEach(f=>{const k=+f.dataset.d;f.style.transform=`translate(${x*k}px,${y*k}px)`})});
+document.querySelectorAll('.item').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.transform=`perspective(800px) rotateY(${((e.clientX-r.left)/r.width-.5)*14}deg) rotateX(${-((e.clientY-r.top)/r.height-.5)*14}deg)`});c.addEventListener('pointerleave',()=>c.style.transform='')});
+</script>
+</body>
+</html>
